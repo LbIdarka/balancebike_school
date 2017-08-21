@@ -220,44 +220,52 @@
       <input type="radio" id="btn-2" name="toggle">
       <input type="radio" id="btn-3" name="toggle">
       <input type="radio" id="btn-4" name="toggle">
-      <div class="slider-seasons-controls">
+      <!-- <div class="slider-seasons-controls">
         <label for="btn-1"></label>
         <label for="btn-2"></label>
         <label for="btn-3"></label>
         <label for="btn-4"></label>
-      </div>
+      </div> -->
       <div class="slider-seasons-group">
-        <div class="slider-seasons-slide">
+        <div class="slider-seasons-slide  #summer">
           <div class="slider-seasons-text  container">
             <h2 class="slider-seasons-title">Обучение проходит круглый год!</h2>
             <a href="#" class="btn">Записаться на тренировку</a>
+            <label class="prev" for="btn-4"><span class="visually-hidden">назад</span></label>
+            <label class="next" for="btn-2"><span class="visually-hidden">вперед</span></label>
           </div>
         </div>
-        <div class="slider-seasons-slide">
+        <div class="slider-seasons-slide  #autumn">
           <div class="slider-seasons-text  container">
             <h2 class="slider-seasons-title">Обучение проходит круглый год!</h2>
             <a href="#" class="btn">Записаться на тренировку</a>
+            <label class="prev" for="btn-1"><span class="visually-hidden">назад</span></label>
+            <label class="next" for="btn-3"><span class="visually-hidden">вперед</span></label>
           </div>
         </div>
-        <div class="slider-seasons-slide">
+        <div class="slider-seasons-slide  #winter">
           <div class="slider-seasons-text  container">
             <h2 class="slider-seasons-title">Обучение проходит круглый год!</h2>
             <a href="#" class="btn">Записаться на тренировку</a>
+            <label class="prev" for="btn-2"><span class="visually-hidden">назад</span></label>
+            <label class="next" for="btn-4"><span class="visually-hidden">вперед</span></label>
           </div>
         </div>
-        <div class="slider-seasons-slide">
+        <div class="slider-seasons-slide  #spring">
           <div class="slider-seasons-text  container">
             <h2 class="slider-seasons-title">Обучение проходит круглый год!</h2>
             <a href="#" class="btn">Записаться на тренировку</a>
+            <label class="prev" for="btn-3"><span class="visually-hidden">назад</span></label>
+            <label class="next" for="btn-1"><span class="visually-hidden">вперед</span></label>
           </div>
         </div>
       </div>
     </div>
 
     <section class="training">
-      <div class="training-wrapper  container">
+      <div class="container">
+        <h2 class="training-title  title">Регламент занятий</h2>
         <div class="training-inner">
-          <h2 class="training-title">Регламент занятий</h2>
           <ul class="training-list">
             <li class="training-item">Разминка</li>
             <li class="training-item">Упражнения на баланс и координацию</li>
@@ -266,34 +274,37 @@
             <li class="training-item">Заезды на памп-треке</li>
           </ul>
         </div>
-        <div class="training-inner">
-          <h2 class="protection">С собой берем:</h2>
-          <ul class="protection-list">
-            <li class="protection-item">
-              <img src="" alt="шлем">
-              <b>Обязательно!</b>
-            </li>
-            <li class="protection-item">
-              <img src="" alt="перчатки">
-              <i>Желательно</i>
-            </li>
-            <li class="protection-item">
-              <img src="" alt="защита">
-              <i>Желательно</i>
-            </li>
-            <li class="protection-item">
-              <img src="" alt="вода">
-              <b>Обязательно!</b>
-            </li>
-            <li class="protection-item">
-              <img src="" alt="сменная обувь">
-              <b>Обязательно!</b><span>(сменная обувь в холодное время года для занятий в зале)</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
 
+    <section class="protection">
+      <div class="container">
+        <h2 class="protection-title">С собой берем:</h2>
+        <ul class="protection-list">
+          <li class="protection-item">
+            <img src="img/helmet.png" width="100" height="66" alt="шлем">
+            <b>Обязательно!</b>
+          </li>
+          <li class="protection-item">
+            <img src="img/gloves.png" width="90" height="105" alt="перчатки">
+            <i>Желательно</i>
+          </li>
+          <li class="protection-item">
+            <img src="img/protection.png" width="100" height="106" alt="защита">
+            <i>Желательно</i>
+          </li>
+          <li class="protection-item">
+            <img src="img/water.png" width="41" height="105" alt="вода">
+            <b>Обязательно!</b>
+          </li>
+          <!-- <li class="protection-item">
+            <img src="" alt="сменная обувь">
+            <b>Обязательно!</b><span>(сменная обувь в холодное время года для занятий в зале)</span>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+      
     <section class="payment">
       <div class="container">
         <h2 class="payment-title">Стоимость занятий</h2>

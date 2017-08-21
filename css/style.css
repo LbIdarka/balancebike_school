@@ -375,6 +375,7 @@ img {
   color: #f5f5f5;
   font-size: 18px;
   font-weight: 700;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   background: #5aa746;
@@ -816,37 +817,174 @@ img {
 /*======= SLIDER-SEASONS =======*/
 
 .slider-seasons {
+  position: relative;
   width: 100%;
 }
 
+input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 .slider-seasons-slide {
+  display: none;
   width: 100%;
+  min-height: 500px;
+  padding: 30px 0 50px;
+  background-color: #0D1F0C;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider-seasons-slide:nth-child(1) {
+  background-image: url("../img/summer.jpg");
+  background-position-y: 30%;
+}
+
+.slider-seasons-slide:nth-child(2) {
+  background-image: url("../img/autumn.jpg");
+  background-position-y: 8%;
+}
+
+.slider-seasons-slide:nth-child(3) {
+  background-image: url("../img/winter.jpg");
+  background-position-y: 8%;
+}
+
+.slider-seasons-slide:nth-child(4) {
+  background-image: url("../img/spring.jpg");
+  background-position-y: 30%;
 }
 
 .slider-seasons-slide:nth-child(n+2) {
   display: none;
 }
 
+.slider-seasons-text {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.slider-seasons-title {
+  width: 100%;
+  margin: 0 0 auto;
+  font-size: 48px;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+  color: wheat;
+  text-shadow: 5px -1px 0px black;
+}
+
+.prev::before {
+  content: "";
+  position: absolute;
+  top: 52%;
+  left: 0;
+  width: 0px;
+  height: 0;
+  background: transparent;
+  border: solid 30px;
+  border-color: transparent #fed11a transparent transparent;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.next::after {
+  content: "";
+  position: absolute;
+  top: 52%;
+  right: 0;
+  width: 0px;
+  height: 0;
+  background: transparent;
+  border: solid 30px;
+  border-color: transparent transparent transparent #fed11a;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-seasons-group .slider-seasons-slide:nth-child(1),
+#btn-2:checked ~ .slider-seasons-group .slider-seasons-slide:nth-child(2),
+#btn-3:checked ~ .slider-seasons-group .slider-seasons-slide:nth-child(3),
+#btn-4:checked ~ .slider-seasons-group .slider-seasons-slide:nth-child(4) {
+  display: block;
+  animation: scroll 1s linear;
+}
+
+@keyframes scroll {
+	0% { 
+    opacity: 0.6;
+  }
+
+	100% { 
+    opacity: 1;
+  }
+}
 
 /*======= TRAINING =======*/
 
- .training { /* фото в бэкграунде тянется на весь вьюпорт, но видна только в  центре и за перделами контейнера, текст на белом фоне */ 
+ .training { 
   width: 100%;
-}
-
-.training-wrapper {
-  display: flex;
-  justify-content: space-between;
+  padding: 50px 0;
+  background: url("../img/layer 0.jpg") repeat-x;
 }
 
 .training-inner {
-  width: 30%;
+  width: 100%;
+  background: url("../img/training.jpg") no-repeat 100% 0;
 }
 
 .training-list {
   margin: 0;
-  padding: 0;
+  padding: 55px 0 55px 6.3%; /* 70px / 1120px */
   list-style: none;
+}
+
+.training-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 25px;
+  font-size: 20px;
+  color: #000000;
+}
+
+.training-item::before {
+  content: " ";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #5aa746;
+  transition: all .2s ease;
+}
+
+.training-item:last-child::before {
+  background: rgb(255, 0, 0);
+}
+
+.training-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  margin-top: 10px;
+  width: 2px;
+  height: 37px;
+  background: #ffd700;
+  transition: all .2s ease;
+}
+
+.protection-title {
+  margin-top: 0;
 }
 
 .protection-list {
