@@ -983,18 +983,73 @@ input[type="radio"] {
   transition: all .2s ease;
 }
 
+
+/*======= PROTECTION =======*/
+
+.protection {
+  padding: 70px 0 50px;
+  background: #fff8dc;
+}
+
 .protection-title {
   margin-top: 0;
 }
 
 .protection-list {
+  display: flex;
   margin: 0;
+  margin-bottom: 60px;
   padding: 0;
   list-style: none;
 }
 
+.protection-item {
+  display: flex;
+  width: 15%;
+  min-height: 144px;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.protection-item img {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.protextion-label {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.protection-item b {
+  color: #ff0000;
+}
+
+
+.protection-item i {
+  color: #ff8c00;
+}
+
+.protection-fn {
+  width: 100%;
+  font-size: 12px;
+}
+
+.protection-fn sup {
+  color: #ff0000;
+}
+
 
 /*======= PAYMENT =======*/
+
+.payment {
+  padding: 70px 0 50px;
+  background: #c1f0c1;
+}
 
 .payment-list {
   display: flex;
@@ -1006,18 +1061,59 @@ input[type="radio"] {
 
 .payment-item {
   display: flex;
-  width: 30%;
+  width: 20%;
+  margin: auto;
   flex-wrap: wrap;
   text-align: center;
+  border: 30px solid #ffffff;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  border-radius: 15% 118% 16% 115%;
+  padding: 43px 40px;
+  box-shadow: 0px 0px 17px 5px #92c63c, 
+              0 0 33px 15px #ffd021, 
+              0 0 0px 20px #fc5505;
+  animation: border 3s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.payment-item:hover {
+  animation-play-state: paused;
+  animation-iteration-count: none;
 }
 
 .payment-item span {
   display: inline-block;
   width: 100%;
+  font-size: 20px;
+}
+
+.payment-item-price {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+
+@keyframes border {
+	0% { 
+    border-radius: 15% 118% 16% 115%;
+  }
+
+  50% {
+    border-radius: 115% 16% 118% 15%;
+  }
+
+	100% { 
+    border-radius: 15% 118% 16% 115%;
+  }
 }
 
 
 /*======= SIGN-UP =======*/
+
+.sign-up {
+  padding: 70px 0 50px;
+}
 
 .sign-up-wrapper {
   display: table;
