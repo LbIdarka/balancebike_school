@@ -1,4 +1,5 @@
-//функция для фиксированной навигации по лэндингу
+//======= функция для фиксированной навигации по лэндингу =======//
+
 window.onscroll = function() {//событие скрола
   var stikyMenu = document.querySelector(".main-nav"); //задаем переменную для элемента, который будет "липнуть"
   var scrolled = window.pageYOffset; //проверяем состояние скрола
@@ -10,6 +11,8 @@ window.onscroll = function() {//событие скрола
   }
 }
 
+
+//======= слайдер =======//
 
   $('.balancebike-foto').slick({
     autoplay: true,
@@ -28,3 +31,28 @@ window.onscroll = function() {//событие скрола
     focusOnSelect: true,
     button: false
   });
+
+
+//======= карта =======//
+
+  var myMap;
+  
+  // Дождёмся загрузки API и готовности DOM.
+  ymaps.ready(init);
+  
+  function init () {
+      // Создание экземпляра карты и его привязка к контейнеру с
+      // заданным id ("map").
+      myMap = new ymaps.Map('map', {
+          // При инициализации карты обязательно нужно указать
+          // её центр и коэффициент масштабирования.
+          center: [47.249879699421136,39.78802749999991], // парк Авиаторов Ростов
+          zoom: 10
+      }, {
+          searchControlProvider: 'yandex#search'
+      });
+
+      myMap.geoObjects
+      .add(new ymaps.Placemark([47.249879699421136,39.78802749999991]))
+      .add(new ymaps.Placemark([47.18675302959791,39.62492681626882]))
+  }
