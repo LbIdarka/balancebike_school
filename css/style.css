@@ -224,30 +224,6 @@ img {
   -webkit-box-shadow: 0 2px 12px 2px;
           box-shadow: 0 2px 12px 2px;
 }
-/*  стрелки вверх
-.nav-fixed::before {
-  content: "";
-  position: absolute;
-  bottom: 22px;
-  right: 10px;
-  width: 25px;
-  height: 7px;
-  background: #fed11a;
-  box-shadow: -11px -14px 0px 0px #ffffff;
-  transform: rotate(40deg);
-}
-
-.nav-fixed::after {
-  content: "";
-  position: absolute;
-  bottom: 22px;
-  right: 25px;
-  width: 25px;
-  height: 7px;
-  background: #fed11a;
-  transform: rotate(-39deg);
-  box-shadow: 12px -14px 0px 0px #ffffff;
-} */
 
 .main-nav-list {
   display: -webkit-box;
@@ -339,7 +315,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 19% auto auto;
+  margin: auto auto 200px;
 }
 
 .slogan-1 {
@@ -437,7 +413,7 @@ img {
 
 .btn:hover::before,
 .btn:focus::before {
-  left: calc(100% - 50px);
+  left: calc(100% - 39px);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -573,6 +549,7 @@ img {
 
 .balancebike {
   padding: 60px 0;
+  background: #c1f0c1;
 }
 
 .balancebike-inner {
@@ -658,15 +635,18 @@ img {
 }
 
 .gallery-slide:hover,
+.gallery-slide:focus,
 .slick-current {
   color: #fed11a;
   background: #2f4f4f;
   border-color: #2f4f4f;
+  outline: none;
 }
 
 .gallery-slide img {
   display: block;
   margin: auto;
+  object-fit: cover;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
   outline: none;
@@ -714,10 +694,6 @@ img {
   display: none;
 }
 
-.gallery-slide .slick-slide .slick-active {
-  width: 120px !important;
-}
-
 
 /*======= PROGGRAM =======*/
 
@@ -751,14 +727,19 @@ img {
 /*======= FEATURES =======*/
 
 .features {
-  padding: 70px 0 50px;
+  padding: 70px 0;
   background: #fff8dc;
+}
+
+.features-title {
+  margin-bottom: 70px;
 }
 
 .features-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -770,7 +751,7 @@ img {
   text-align: center;
   font-size: 20px;
   font-weight: 300;
-  padding: 120px 10px 10px;
+  padding: 150px 10px 10px;
 
 }
 
@@ -782,9 +763,9 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  left: 20%;
-  width: 100px;
-  height: 100px;
+  left: 15%;
+  width: 120px;
+  height: 120px;
   border: 6px solid #5aa746;
   border-radius: 50%;
   background: transparent url("../img/ballet-pose.svg") no-repeat;
@@ -816,7 +797,8 @@ img {
 
 .age {
   padding: 50px 0 0;
-  background: url("../img/layer 0.jpg") repeat;
+  background: url("../img/layer 0.jpg") no-repeat;
+  background-size: cover;
 }
 
 .age-text {
@@ -843,10 +825,35 @@ img {
   border-radius: 120px 5px;
   border: 5px solid yellowgreen;
   border-width: 5px 5px 25px 25px; 
-  background: url("../img/age-boy.jpg") no-repeat;
-  background-position: center;
+  background-image: url("../img/age-boy.jpg"), url("../img/gerl-2.jpg"), url("../img/boy-2.jpg"), url("../img/gerl-3.jpg"), url("../img/gerl+boy.jpg");
+  background-repeat: no-repeat;
   -webkit-transform: skew(-7deg);
           transform: skew(-7deg);
+  animation: foto 20s ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes foto {
+
+  0% {
+    background-position: 0 20%, 600px 0, 1200px 0, 1800px 0, 2400px 0;
+  }
+
+  25% {
+    background-position: -600px 0, 0 0, 600px 0, 1200px 0, 1800px 0;
+  }
+
+  50% {
+    background-position: -1200px 0, -600px 0, 0 0, 600px 0, 1200px 0;
+  }
+
+  75% {
+    background-position: -1800px 0, -1200px 0, -600px 0, 0 0, 600px 0;
+  }
+
+  100% {
+    background-position: -2400px 0, -1800px 0, -1200px 0, -600px 0, 0 0;
+  }
 }
 
 .age-text:last-child {
@@ -856,21 +863,15 @@ img {
 }
 
 .age-text:last-child::before {
-  background: url("../img/age-gerl.jpg") no-repeat;
   left: 50%;
+  background-image: url("../img/age-gerl.jpg"), url("../img/boy-2.jpg"), url("../img/gerl-3.jpg"), url("../img/boy-3.jpg"), url("../img/gerl+boy-2.jpg");
+
 }
 
 .age-inner {
   padding: 50px 0;
   background: #c1f0c1;
 }
-
-/* .age-subtitle {
-  font-size: 28px;
-  margin-bottom: 0;
-  line-height: 1.1;
-  font-weight: 700;
-} */
 
 .age-list {
   display: -webkit-box;
@@ -912,6 +913,7 @@ img {
 .age-foto img {
   -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
           clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  object-fit: cover;
   -webkit-transition: 1s;
   transition: 1s;
   cursor: pointer;
@@ -922,148 +924,86 @@ img {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  border: 5px solid #fed11a;
 }
 
 
-/*======= SLIDER-SEASONS =======*/
+/*======= SEASONS =======*/
 
-.slider-seasons {
-  position: relative;
-  width: 100%;
-}
-
-input[type="radio"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
-
-.slider-seasons-slide {
-  display: none;
-  width: 100%;
-  min-height: 500px;
-  padding: 30px 0 50px;
-  background-color: #0D1F0C;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.slider-seasons-slide:nth-child(1) {
-  background-image: url("../img/summer.jpg");
-  background-position-y: 30%;
-}
-
-.slider-seasons-slide:nth-child(2) {
-  background-image: url("../img/autumn.jpg");
-  background-position-y: 8%;
-}
-
-.slider-seasons-slide:nth-child(3) {
-  background-image: url("../img/winter.jpg");
-  background-position-y: 8%;
-}
-
-.slider-seasons-slide:nth-child(4) {
-  background-image: url("../img/spring.jpg");
-  background-position-y: 30%;
-}
-
-.slider-seasons-slide:nth-child(n+2) {
-  display: none;
-}
-
-.slider-seasons-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.seasons {
   display: flex;
-  height: 600px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
 }
 
-.slider-seasons-title {
+.seasons-wrapper {
+  width: 25%;
+}
+
+.seasons-wrapper .seasons-foto {
+  height: 100%
+}
+
+.seasons-inner {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.seasons-foto {
+  position: relative;
+  cursor: pointer;
+}
+
+.seasons-foto img {
+  display: block;
   width: 100%;
-  margin: 0 0 auto;
-  font-size: 48px;
+  height: 100%;
+  object-fit: cover;
+}  
+
+.seasons-foto:hover img {
+  opacity: 0.5;
+}
+
+.seasons-foto:hover .seasons-btn {
+  display: block;
+}
+
+.seasons-inner .seasons-foto {
+  width: 50%;
+}
+
+.seasons-title {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  font-size: 36px;
   line-height: 1.5;
   font-weight: 700;
   text-align: center;
-  color: wheat;
-  text-shadow: 5px -1px 0px black;
+  color: #2f4f4f;
+  text-shadow: -1px -1px black, 0 1px 0 yellow;
+  background: #fed11a;
 }
 
-.prev::before {
-  content: "";
+.seasons-btn {
   position: absolute;
-  top: 52%;
+  bottom: 30px;
   left: 0;
-  width: 0px;
-  height: 0;
-  background: transparent;
-  border: solid 30px;
-  border-color: transparent #fed11a transparent transparent;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
+  display: none;
+  width: 290px;
+  font-size: 14px;
 }
 
-.next::after {
-  content: "";
-  position: absolute;
-  top: 52%;
-  right: 0;
-  width: 0px;
-  height: 0;
-  background: transparent;
-  border: solid 30px;
-  border-color: transparent transparent transparent #fed11a;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
-}
-
-#btn-1:checked ~ .slider-seasons-group .slider-seasons-slide:nth-child(1),
-#btn-2:checked ~ .slider-seasons-group .slider-seasons-slide:nth-child(2),
-#btn-3:checked ~ .slider-seasons-group .slider-seasons-slide:nth-child(3),
-#btn-4:checked ~ .slider-seasons-group .slider-seasons-slide:nth-child(4) {
-  display: block;
-  -webkit-animation: scroll 1s linear;
-          animation: scroll 1s linear;
-}
-
-@-webkit-keyframes scroll {
-	0% { 
-    opacity: 0.6;
-  }
-
-	100% { 
-    opacity: 1;
-  }
-}
-
-@keyframes scroll {
-	0% { 
-    opacity: 0.6;
-  }
-
-	100% { 
-    opacity: 1;
-  }
-}
 
 /*======= TRAINING =======*/
 
  .training { 
   width: 100%;
   padding: 50px 0;
-  background: url("../img/layer 0.jpg") repeat-x;
+  background: url("../img/layer 0.jpg") no-repeat;
+  background-size: cover;
 }
 
 .training-inner {
@@ -1281,6 +1221,7 @@ input[type="radio"] {
   background-size: cover;
   background-position-y: 30%;
   background-blend-mode: luminosity;
+  background-attachment: fixed;
 }
 
 .sign-up-wrapper {
@@ -1383,6 +1324,11 @@ input[type="radio"] {
   display: flex;
   padding: 25px 0;
 }
+
+.page-footer .logo-link:hover img {
+  transition: 1s ease-in;
+  transform: rotate(360deg);
+} 
 
 .social {
   width: 35%;
