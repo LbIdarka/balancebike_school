@@ -691,7 +691,7 @@ img {
 
 .proggram {
   padding: 85px 0;
-  background: url("../img/layer 0.jpg") repeat;
+  background: url("../img/layer.jpg") repeat;
   background-size: cover;
 }
 
@@ -789,7 +789,7 @@ img {
 
 .age {
   padding: 50px 0 0;
-  background: url("../img/layer 0.jpg") no-repeat;
+  background: url("../img/layer.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -1029,7 +1029,7 @@ img {
  .training { 
   width: 100%;
   padding: 50px 0;
-  background: url("../img/layer 0.jpg") no-repeat;
+  background: url("../img/layer.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -1239,7 +1239,7 @@ img {
 .sign-up {
   padding: 70px 0 70px;
   background-color: rgba(13, 31, 12, 0.9);;
-  background-image: url("../img/background2.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 30%;
