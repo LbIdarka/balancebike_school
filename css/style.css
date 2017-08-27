@@ -463,7 +463,6 @@ img {
   background: #fed11a;
   -webkit-transform: rotate(-39deg);
           transform: rotate(-39deg);
-  /* box-shadow: -13px 18px 0px 0px #ffffff; */
   -webkit-animation: 5s infinite ease-out;
           animation: 5s infinite ease-out;
   -webkit-animation-name: arrow1;
@@ -476,9 +475,7 @@ img {
           animation-play-state: paused;
 }
 
-@-webkit-keyframes arrow1{
-
-  0 {}
+@-webkit-keyframes arrow1 {
 
   50% {
     background: #ffffff;
@@ -493,9 +490,7 @@ img {
   }
 }
 
-@keyframes arrow1{
-
-  0 {}
+@keyframes arrow1 {
 
   50% {
     background: #ffffff;
@@ -510,10 +505,8 @@ img {
   }
 }
 
-@-webkit-keyframes arrow2{
-  
-    0 {}
-  
+@-webkit-keyframes arrow2 {
+
     50% {
       background: #ffffff;
       -webkit-box-shadow: 16px 18px 0px 0px #fed11a;
@@ -527,10 +520,8 @@ img {
     }
   }
 
-@keyframes arrow2{
-  
-    0 {}
-  
+@keyframes arrow2 {
+
     50% {
       background: #ffffff;
       -webkit-box-shadow: 16px 18px 0px 0px #fed11a;
@@ -646,7 +637,8 @@ img {
 .gallery-slide img {
   display: block;
   margin: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
   outline: none;
@@ -829,8 +821,33 @@ img {
   background-repeat: no-repeat;
   -webkit-transform: skew(-7deg);
           transform: skew(-7deg);
-  animation: foto 20s ease;
-  animation-iteration-count: infinite;
+  -webkit-animation: foto 20s ease;
+          animation: foto 20s ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes foto {
+
+  0% {
+    background-position: 0 20%, 600px 0, 1200px 0, 1800px 0, 2400px 0;
+  }
+
+  25% {
+    background-position: -600px 0, 0 0, 600px 0, 1200px 0, 1800px 0;
+  }
+
+  50% {
+    background-position: -1200px 0, -600px 0, 0 0, 600px 0, 1200px 0;
+  }
+
+  75% {
+    background-position: -1800px 0, -1200px 0, -600px 0, 0 0, 600px 0;
+  }
+
+  100% {
+    background-position: -2400px 0, -1800px 0, -1200px 0, -600px 0, 0 0;
+  }
 }
 
 @keyframes foto {
@@ -913,7 +930,8 @@ img {
 .age-foto img {
   -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
           clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: 1s;
   transition: 1s;
   cursor: pointer;
@@ -931,9 +949,14 @@ img {
 /*======= SEASONS =======*/
 
 .seasons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: stretch;
-  align-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
 }
 
 .seasons-wrapper {
@@ -945,9 +968,12 @@ img {
 }
 
 .seasons-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50%;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .seasons-foto {
@@ -959,7 +985,8 @@ img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }  
 
 .seasons-foto:hover img {
@@ -1182,8 +1209,6 @@ img {
 
 @-webkit-keyframes border {
 
-  0 {}
-
   50% {
     border-top-color: rgb(34, 139, 34);
     border-bottom-color: rgb(154, 205, 50);
@@ -1196,8 +1221,6 @@ img {
 }
 
 @keyframes border {
-
-  0 {}
 
   50% {
     border-top-color: rgb(34, 139, 34);
@@ -1326,8 +1349,10 @@ img {
 }
 
 .page-footer .logo-link:hover img {
+  -webkit-transition: 1s ease-in;
   transition: 1s ease-in;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 } 
 
 .social {

@@ -1,4 +1,4 @@
-//======= функция для фиксированной навигации по лэндингу =======//
+//======= функция для фиксированной навигации по лендингу =======//
 
 window.onscroll = function() {//событие скрола
   var stikyMenu = document.querySelector(".main-nav"); //задаем переменную для элемента, который будет "липнуть"
@@ -23,6 +23,7 @@ window.onscroll = function() {//событие скрола
     fade: false,
     asNavFor: '.gallery'
   });
+
   $('.gallery').slick({
     slidesToShow: 5,
     asNavFor: '.balancebike-foto',
