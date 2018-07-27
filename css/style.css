@@ -128,8 +128,6 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 5px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   align-items: center;
 }
 
@@ -146,20 +144,21 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 40%;
+  flex-grow: 1;
+  flex-wrap: wrap;
   margin: 0;
   margin-left: auto;
   padding: 0;
+  justify-content: flex-end;
   list-style: none;
 }
 
 .common-menu-item {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 15%;
+  margin: 10px 0 10px 15px;
   font-size: 20px;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
 }
 
 .common-menu-item a {
@@ -184,7 +183,7 @@ img {
   top: 110px;
   left: 0;
   width: 100%;
-  padding: 10px 0;
+  padding-top: 10px;
   background: #e1ecec;
 }
 
@@ -212,6 +211,7 @@ img {
 .main-nav-item {
   display: flex;
   width: 14%;
+  margin-bottom: 10px;
   align-items: center;
   font-size: 14px;
   font-weight: 400;
@@ -238,12 +238,12 @@ img {
 .main-nav-item:hover,
 .main-nav-item:focus {
   background: #00A1A1; 
-  color: #ffcf13;
+  color: #162352;
 }
 
 .main-nav-item:active {
   background: #00A1A1; 
-  color: rgba(255, 207, 19, 0.5);
+  color: rgba(22, 35, 82, 0.5);;
 }
 
 
@@ -251,11 +251,11 @@ img {
 
 .caption {
   width: 100%;
-  height: calc(100vh - 101px);
+  height: 100vh;
   padding: 85px 0 20px;
   background: #d6e4f1 url("../img/caption.jpg");
   background-size: cover;
-  background-position-y: 33%;
+  background-position-y: 60%;
 }
 
 .caption-wrapper {
@@ -356,10 +356,10 @@ img {
 .btn {
   position: relative;
   display: block;
-  width: 30%;
+  width: 420px;
   max-width: 450px;
   align-self: flex-end;
-  margin-bottom: 50px;
+  margin-bottom: 155px;
   padding: 20px;
   color: #f5f5f5;
   font-size: 18px;
@@ -367,7 +367,7 @@ img {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background: #00A1A1;
+  background: rgba(0, 161, 161, 0.6);
   border-radius: 5px;
 }
 
@@ -410,7 +410,7 @@ img {
   bottom: 0;
   width: 60px;
   min-height: 30px;
-  margin: 13px 0;
+  margin-bottom: 115px;
 }
 
 .caption-btn::before {
@@ -1395,31 +1395,13 @@ img {
 
 /*======= TABLET SCREEN =======*/
 
-@media (min-width: 700px) and (max-width: 1160px) {
+@media (max-width: 1160px) and (min-width: 700px) {
   .container {
     width: 94%;
-    padding: 0 1.5%;
-  }
-
-  .phone-desc {
-    font-size: 24px;
-  }
-
-  .phone-number {
-    font-size: 16px;
-  }
-
-  .logo img {
-    width: 140px;  /* for layout */
-    height: 47px;
   }
 
   .common-menu-item {
     font-size: 16px;
-  }
-
-  .main-nav {
-    top: 75px;
   }
 
   .main-nav-item {
