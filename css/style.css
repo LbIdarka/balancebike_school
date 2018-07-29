@@ -94,6 +94,7 @@ img {
 .title-text {
   display: inline-block;
   vertical-align: middle;
+  padding: 0 25px;
 }
 
 .title::before,
@@ -110,12 +111,10 @@ img {
 
 .title::before {
   margin-left: -100%;
-  left: -40px;
 }
 
 .title::after {
   margin-right: -100%;
-  right: -40px;
 }
 
 
