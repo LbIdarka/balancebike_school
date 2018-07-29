@@ -87,34 +87,37 @@ img {
   line-height: 36px;
   font-weight: 700;
   text-align: center;
-  color: currentColor;
+  color: #192964;
+  overflow: hidden;
+}
+
+.title-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  height: 3px;
+  background: #ee7601;
+  box-shadow: 0 1px 4px 0px #2c4296;
+  z-index: -1;
 }
 
 .title::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 27%;
-  height: 3px;
-  background: #ee7601;
-  -webkit-box-shadow: 0 1px 1px 0px #000000;
-          box-shadow: 0 1px 1px 0px #000000;
-  opacity: 0.4;
+  margin-left: -100%;
+  left: -40px;
 }
 
 .title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 27%;
-  height: 3px;
-  background: #ee7601;
-  -webkit-box-shadow: 0 1px 1px 0px #000000;
-          box-shadow: 0 1px 1px 0px #000000;
-  opacity: 0.4;
+  margin-right: -100%;
+  right: -40px;
 }
+
 
 /*======= HEADER =======*/
 
@@ -308,8 +311,7 @@ img {
   text-align: right;
   color: #fed11a;
   text-transform: uppercase;
-  text-shadow: -1px -1px black,
-  0 1px 0 grey;
+  text-shadow: -1px -1px black, 0 1px 0 grey;
   background: #2f4f4f;
 }
 
@@ -333,24 +335,23 @@ img {
 }
 
 .slogan-3 {
+  display: block;
+  width: 43%;
+  -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-item-align: end;
+    align-self: end;
   padding: 0 5px 0 15px;
   font-size: 56px;
   line-height: 50px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: #2f4f4f ;
+  text-align: left;
   text-transform: uppercase;
-  text-shadow: -1px -1px black,
-  0 1px 0 yellow;
+  color: #2f4f4f;
+  text-shadow: -1px -1px black, 0 1px 0 yellow;
   background: #fed11a;
-  display: block;
-    width: 43%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-    text-align: left;
-    -ms-flex-item-align: end;
-        align-self: end;
 }
 
 .btn {
@@ -374,6 +375,7 @@ img {
 .btn:hover,
 .btn:focus {
   color: #ee7601;
+  background: rgba(0, 161, 161, 1);
 }
 
 .btn::before {
@@ -420,7 +422,7 @@ img {
   left: 0;
   width: 40px;
   height: 11px;
-  background: #fed11a;
+  background: #ee7601;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
   -webkit-animation: 5s infinite ease-out;
@@ -436,7 +438,7 @@ img {
   left: 25px;
   width: 40px;
   height: 12px;
-  background: #fed11a;
+  background: #ee7601;
   -webkit-transform: rotate(-39deg);
           transform: rotate(-39deg);
   -webkit-animation: 5s infinite ease-out;
@@ -455,12 +457,12 @@ img {
 
   50% {
     background: #ffffff;
-    -webkit-box-shadow: -13px 18px 0px 0px #fed11a;
-            box-shadow: -13px 18px 0px 0px #fed11a;
+    -webkit-box-shadow: -13px 18px 0px 0px #ee7601;
+            box-shadow: -13px 18px 0px 0px #ee7601;
   }
 
   100% {
-    background: #fed11a;
+    background: #ee7601;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -470,12 +472,12 @@ img {
 
   50% {
     background: #ffffff;
-    -webkit-box-shadow: -13px 18px 0px 0px #fed11a;
-            box-shadow: -13px 18px 0px 0px #fed11a;
+    -webkit-box-shadow: -13px 18px 0px 0px #ee7601;
+            box-shadow: -13px 18px 0px 0px #ee7601;
   }
 
   100% {
-    background: #fed11a;
+    background: #ee7601;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -485,12 +487,12 @@ img {
 
     50% {
       background: #ffffff;
-      -webkit-box-shadow: 16px 18px 0px 0px #fed11a;
-              box-shadow: 16px 18px 0px 0px #fed11a;
+      -webkit-box-shadow: 16px 18px 0px 0px #ee7601;
+              box-shadow: 16px 18px 0px 0px #ee7601;
     }
   
     100% {
-      background: #fed11a;
+      background: #ee7601;
       -webkit-box-shadow: none;
               box-shadow: none;
     }
@@ -500,12 +502,12 @@ img {
 
     50% {
       background: #ffffff;
-      -webkit-box-shadow: 16px 18px 0px 0px #fed11a;
-              box-shadow: 16px 18px 0px 0px #fed11a;
+      -webkit-box-shadow: 16px 18px 0px 0px #ee7601;
+              box-shadow: 16px 18px 0px 0px #ee7601;
     }
   
     100% {
-      background: #fed11a;
+      background: #ee7601;
       -webkit-box-shadow: none;
               box-shadow: none;
     }
@@ -536,7 +538,7 @@ img {
 
 .balancebike-img img {
   display: block;
-  border: 6px solid #2f4f4f;
+  border: 6px solid  #192964;
   border-radius: 6px;
 }
 
@@ -564,7 +566,7 @@ img {
 }
 
 .advance-text {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
 }
 
@@ -593,9 +595,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #000000;
-  background: #fed11a;
-  border: 6px solid #fed11a;
+  color:  #192964;
+  background: #ee7601;
+  border: 6px solid #ee7601;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -603,9 +605,9 @@ img {
 .gallery-slide:hover,
 .gallery-slide:focus,
 .slick-current {
-  color: #fed11a;
-  background: #2f4f4f;
-  border-color: #2f4f4f;
+  color: #ee7601;
+  background: #192964;
+  border-color: #192964;
   outline: none;
 }
 
@@ -636,7 +638,7 @@ img {
   right: -6px;
   width: 18px;
   height: 5px;
-  background: #fed11a;
+  background: #192964;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
   z-index: 3;
@@ -649,7 +651,7 @@ img {
   right: -6px;
   width: 18px;
   height: 5px;
-  background: #fed11a;
+  background: #192964;
   -webkit-transform: rotate(-41deg);
           transform: rotate(-41deg);
   z-index: 3;
@@ -773,7 +775,7 @@ img {
   width: 100%;
   min-height: 330px;
   padding-left: 50%;
-  padding-top: 95px;
+  padding-top: 80px;
   font-size: 32px;
   line-height: 1.4;
   font-weight: 700;
@@ -917,7 +919,7 @@ img {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  border: 5px solid #fed11a;
+  border: 5px solid #ee7601;
 }
 
 
@@ -971,9 +973,9 @@ img {
   line-height: 1.5;
   font-weight: 700;
   text-align: center;
-  color: #2f4f4f;
-  text-shadow: -1px -1px black, 0 1px 0 yellow;
-  background: #fed11a;
+  color: #192964;
+  text-shadow: -1px -1px #1b1c1f, 0 1px 0 #da7819;
+  background: #ee7601;
 }
 
 .seasons-btn {
@@ -1447,8 +1449,7 @@ img {
     font-size: 30px;
   }
 
-  .title::before,
-  .title::after {
+  .title::before {
     width: 15%;
   }
 
