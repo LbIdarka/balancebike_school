@@ -59,4 +59,6 @@ window.onscroll = function() {// событие скрола
       myMap.geoObjects
       .add(new ymaps.Placemark([47.249879699421136,39.78802749999991]))
       .add(new ymaps.Placemark([47.18675302959791,39.62492681626882]))
+      .add(new ymaps.Placemark([47.204264, 39.732877]))
+      .add(new ymaps.Placemark([47.289298, 39.709880]))
   }
