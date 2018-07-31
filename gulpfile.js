@@ -19,9 +19,9 @@ gulp.task("style", function() {
       autoprefixer()
     ]))
   .pipe(gulp.dest("build/css"))
-  // .pipe(minify())
-  // .pipe(rename("style.min.css"))
-  // .pipe(gulp.dest("build/css"))
+  .pipe(minify())
+  .pipe(rename("style.min.css"))
+  .pipe(gulp.dest("build/css"))
   .pipe(server.stream());
 });
 
