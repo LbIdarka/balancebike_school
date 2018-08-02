@@ -687,8 +687,7 @@ img {
 
 .proggram {
   padding: 85px 0;
-  background: url("../img/bg1.jpg") repeat;
-  background-size: cover;
+  background: url("../img/pattern.png") repeat;
 }
 
 .proggram-inner {
@@ -784,8 +783,7 @@ img {
 
 .age {
   padding: 50px 0 0;
-  background: url("../img/bg1.jpg") no-repeat;
-  background-size: cover;
+  background: url("../img/pattern.png") repeat;
 }
 
 .age-text {
@@ -1027,8 +1025,7 @@ img {
  .training {
   width: 100%;
   padding: 50px 0;
-  background: url("../img/bg1.jpg") no-repeat;
-  background-size: cover;
+  background: url("../img/pattern.png") repeat;
 }
 
 .training-inner {
@@ -1086,7 +1083,7 @@ img {
 
 .protection {
   padding: 70px 0 50px;
-  background: #fff8dc;
+  background: #c1f0c1;
 }
 
 .protection-title {
