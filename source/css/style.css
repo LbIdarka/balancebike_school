@@ -332,13 +332,19 @@ img {
   background: #fed11a;
 }
 
+.caption-footer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 155px;
+  align-self: flex-end;
+}
+
 .btn {
   position: relative;
   display: block;
   width: 420px;
   max-width: 450px;
-  align-self: flex-end;
-  margin-bottom: 155px;
+  margin: 0 auto;
   padding: 20px;
   color: #f5f5f5;
   font-size: 18px;
@@ -385,10 +391,10 @@ img {
 
 .caption-btn {
   position: absolute;
-  bottom: 0;
+  left: 50%;
+  bottom: -30px;
   width: 60px;
-  min-height: 30px;
-  margin-bottom: 115px;
+  transform: translate(-50%);
 }
 
 .caption-btn::before {
