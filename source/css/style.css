@@ -4,6 +4,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: local("robotolight"),
   url("../fonts/Roboto-Light.woff") format("woff"),
   url("../fonts/Roboto-Light.woff2") format("woff");
@@ -13,6 +14,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local("robotoregular"),
   url("../fonts/Roboto-Regular.woff") format("woff"),
   url("../fonts/Roboto-Regular.woff2") format("woff");
@@ -22,6 +24,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local("robotobold"),
        url("../fonts/Roboto-Bold.woff") format("woff"),
        url("../fonts/Roboto-Bold.woff2") format("woff");
@@ -42,7 +45,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: Roboto, Arial, sans-serif;
@@ -220,11 +223,9 @@ img {
   display: block;
   width: 100%;
   padding: 5px;
-  font: inherit;
   color: inherit;
   text-decoration: none;
 }
-
 
 .main-nav-item:hover,
 .main-nav-item:focus {
