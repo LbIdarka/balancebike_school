@@ -17,6 +17,17 @@ window.onscroll = function() {// событие скрола
   }
 }
 
+//======= листание меню на планшетной и мобильной версии =======//
+
+var menuItem = document.querySelectorAll(".main-nav-item");
+var btnNext = document.querySelector(".main-nav-btn-next");
+var btnBack = document.querySelector(".main-nav-btn-back");
+
+btnNext.addEventListener('click', function () {
+  var widthItem = Math.round(menuItem[0].clientWidth);
+  console.log(widthItem);
+})
+
 
 //======= слайдер =======//
 
