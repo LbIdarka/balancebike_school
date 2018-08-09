@@ -208,6 +208,10 @@ img {
   z-index: 11;
 }
 
+.main-nav-btn {
+  display: none;
+}
+
 .main-nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1475,6 +1479,23 @@ img {
     font-size: 18px;
   }
 
+  .nojs .main-nav-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .nojs .main-nav-item {
+    width: 25%;
+  }
+
+  .nojs .main-nav-item:last-child {
+    border-right: 1px solid #40e0d0;
+  }
+
+  .nojs .main-nav-btn {
+    display: none;
+  }
+
   .main-nav {
     top: 100px;
   }
@@ -1488,9 +1509,11 @@ img {
 
   .main-nav-btn {
     position: relative;
+    display: block;
     width: auto;
     background: transparent;
     border: none;
+    cursor: pointer;
   }
 
   .main-nav-btn::before {
@@ -1525,6 +1548,10 @@ img {
     border-top-color: #da7819;
   }
 
+  .main-nav-btn:disabled::before {
+    opacity: 0.2;
+  }
+
   .main-nav-list {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -1542,13 +1569,12 @@ img {
     padding-right: 10px;
   }
 
-  .caption {
-    height: calc(100vh - 75px);
-    background-position: 50%;
+  .nav-fixed {
+    top: 0;
   }
 
-  .caption-name {
-    padding-top: 30px;
+  .caption {
+    background-position: 50%;
   }
 
   .slogan span {
@@ -1577,10 +1603,6 @@ img {
 
   .title {
     font-size: 30px;
-  }
-
-  .title::before {
-    width: 15%;
   }
 
   .balancebike {

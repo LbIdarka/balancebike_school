@@ -3,8 +3,8 @@ var body = document.querySelector('.nojs');
 body.classList.remove('nojs');
 
 //======= функция для фиксированной навигации по лендингу =======//
+var stikyMenu = document.querySelector(".main-nav"); // задаем переменную для элемента, который будет "липнуть"
 window.onscroll = function() {// событие скрола
-  var stikyMenu = document.querySelector(".main-nav"); // задаем переменную для элемента, который будет "липнуть"
   var scrolled = window.pageYOffset; //проверяем состояние скрола
   var menu = document.querySelector(".page-header-wrapper")
   var cssProp = window.getComputedStyle(menu, null).getPropertyValue("height"); // получаем высоту меню из css
@@ -19,15 +19,35 @@ window.onscroll = function() {// событие скрола
 
 //======= листание меню на планшетной и мобильной версии =======//
 
+var menu = document.querySelector(".main-nav-list");
 var menuItem = document.querySelectorAll(".main-nav-item");
 var btnNext = document.querySelector(".main-nav-btn-next");
 var btnBack = document.querySelector(".main-nav-btn-back");
+var widthItem = Math.round(menu.scrollWidth - menu.clientWidth);
 
-btnNext.addEventListener('click', function () {
-  var widthItem = Math.round(menuItem[0].clientWidth);
-  console.log(widthItem);
-})
+var scrolledMenu = function () {
 
+  btnNext.addEventListener('click', function () {
+    if (menu.scrollWidth - menu.scrollLeft - menu.offsetWidth === 0) {
+      btnNext.setAttribute("disabled", "disabled");
+    }
+    menu.scrollLeft += widthItem;
+    btnBack.removeAttribute("disabled");
+    console.log(widthItem);
+    console.log(menu.scrollLeft);
+  });
+
+  btnBack.addEventListener('click', function () {
+    if (menu.scrollLeft === 0) {
+      btnBack.setAttribute("disabled", "disabled");
+    }
+    btnNext.removeAttribute("disabled");
+    menu.scrollLeft -= widthItem;
+    console.log(widthItem);
+    console.log(menu.scrollLeft);
+  });
+};
+scrolledMenu();
 
 //======= слайдер =======//
 
