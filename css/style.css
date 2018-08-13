@@ -798,38 +798,39 @@ img {
   background: url("../img/pattern.png") repeat;
 }
 
-.age-text {
+.age-wrapper {
   position: relative;
-  display: block;
-  width: 100%;
-  min-height: 330px;
-  padding-left: 50%;
-  padding-top: 80px;
-  font-size: 32px;
-  line-height: 1.4;
-  font-weight: 700;
-  text-align: center;
 }
 
-.age-text::before {
+.age-wrapper::before,
+.age-wrapper::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
+  width: 600px;
+  height: 330px;
   border-radius: 120px 5px;
   border: 5px solid #00a1a1;
   border-width: 5px 5px 25px 25px;
-  background-image: url("../img/gerl+boy.jpg"), url("../img/boy.jpg"), url("../img/gerl.jpg"), url("../img/boy-2.jpg"), url("../img/gerl-2.jpg"), url("../img/gerl+boy-1.jpg");
   background-repeat: no-repeat;
   background-position-y: 50%;
   -webkit-transform: skew(-7deg);
           transform: skew(-7deg);
+}
+
+.age-wrapper::before {
+  top: 13%;
+  left: 0;
+  background-image: url("../img/gerl+boy.jpg"), url("../img/boy.jpg"), url("../img/gerl.jpg"), url("../img/boy-2.jpg"), url("../img/gerl-2.jpg"), url("../img/gerl+boy-1.jpg");
   -webkit-animation: foto 20s ease;
           animation: foto 20s ease;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.age-wrapper::after {
+  top: 60%;
+  right: 0;
+  background-image: url("../img/velo.jpg");
 }
 
 @-webkit-keyframes foto {
@@ -886,18 +887,26 @@ img {
   }
 }
 
+.age-title {
+  margin-bottom: 30px;
+}
+
+.age-text {
+  display: block;
+  width: 100%;
+  padding-left: 55%;
+  padding-top: 80px;
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-align: center;
+}
+
 .age-text:last-child {
   padding-left: 0;
   padding-right: 50%;
-  margin-bottom: 35px;
-  margin-top: 20px;
-}
-
-.age-text:last-child::before {
-  left: 50%;
-  -webkit-animation: none;
-          animation: none;
-  background-image: url("../img/velo.jpg");
+  margin-bottom: 150px;
+  margin-top: 90px;
 }
 
 .age-inner {
@@ -1669,6 +1678,36 @@ img {
 
   .features-title {
     margin-bottom: 55px;
+  }
+
+  .age-wrapper::before {
+    top: 8%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+
+  .age-wrapper::after {
+    top: 55%;
+    right: 50%;
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+  }
+
+  .age-text {
+    padding-left: 0;
+    padding-top: 345px;
+    font-size: 28px;
+  }
+
+  .age-text br:nth-child(odd) {
+    display: none;
+  }
+
+  .age-text:last-child {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding: 345px 70px 0;
   }
 
 }
