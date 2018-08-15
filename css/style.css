@@ -1645,7 +1645,6 @@ img {
 
   .proggram-inner {
     background-image: url("../img/programm-1@768.jpg");
-    background-position: center;
   }
 
   .proggram-title {
@@ -1653,12 +1652,9 @@ img {
   }
 
   .proggram-text {
-    padding-left: 0;
+    padding-left: 50%;
+    margin-top: 0;
     font-size: 18px;
-  }
-
-  .proggram-text:first-child {
-    padding-bottom: 300px;
   }
 
   .features {
@@ -1839,9 +1835,14 @@ img {
     }
   }
 
+  .training-inner {
+    background-image: url("../img/training@768.jpg");
+  }
+
   .training-list {
-    width: 55%;
-    padding-left: 5px;
+    width: 50%;
+    padding: 0;
+    padding-left: 15px;
   }
 
   .training-item {
