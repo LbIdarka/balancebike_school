@@ -1644,6 +1644,7 @@ img {
   }
 
   .proggram-inner {
+    background-image: url("../img/programm-1@768.jpg");
     background-position: center;
   }
 
@@ -1694,6 +1695,17 @@ img {
             transform: translate(50%);
   }
 
+  .age-foto img {
+    width: 230px;
+    height: 230px;
+    -webkit-clip-path: none;
+            clip-path: none;
+    -o-object-position: 0 0;
+       object-position: 0 0;
+    border: 4px solid #00a1a1;
+    border-radius: 8px;
+  }
+
   .age-text {
     padding-left: 0;
     padding-top: 345px;
@@ -1734,6 +1746,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 60%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-flex: 1;
@@ -1749,11 +1762,6 @@ img {
 
   .age-item-desc {
     margin-top: 40px;
-  }
-
-  .age-foto {
-    width: 100%;
-    margin-bottom: 0;
   }
 
   .seasons {
@@ -1844,6 +1852,48 @@ img {
     height: 182%;
   }
 
+  .protection {
+    padding-top: 50px;
+  }
 
+  .protection-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .protection-item {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .payment {
+    padding: 50px 0;
+  }
+
+  .payment-list {
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .payment-item {
+    width: 35%;
+    margin-bottom: 40px;
+  }
+
+  .sign-up-wrapper {
+    width: 70%;
+  }
+
+  .common-menu-footer {
+    padding-top: 0;
+  }
+
+  .social-wrapper {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 
 }
