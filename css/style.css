@@ -1837,6 +1837,7 @@ img {
 
   .training-inner {
     background-image: url("../img/training@768.jpg");
+    background-position-y: 50%;
   }
 
   .training-list {
