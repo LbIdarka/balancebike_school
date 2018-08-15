@@ -1831,6 +1831,19 @@ img {
     }
   }
 
+  .training-list {
+    width: 55%;
+    padding-left: 5px;
+  }
+
+  .training-item {
+    font-size: 18px;
+  }
+
+  .training-item:not(:last-child)::after {
+    height: 182%;
+  }
+
 
 
 }
