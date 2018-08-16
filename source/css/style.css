@@ -149,7 +149,7 @@ img {
 }
 
 .common-menu-item {
-  width: 15%;
+  width: auto;
   margin: 10px 0 10px 15px;
   font-size: 20px;
   font-weight: 700;
@@ -157,7 +157,6 @@ img {
 }
 
 .common-menu-item a {
-  font: inherit;
   color: inherit;
   text-decoration: none;
 }
@@ -483,6 +482,8 @@ img {
 
 .balancebike-img img {
   display: block;
+  width: 100%;
+  height: 464px;
   border: 6px solid  #192964;
   border-radius: 6px;
 }
@@ -494,7 +495,7 @@ img {
   flex-wrap: wrap;
 }
 
-.adance-subtitle {
+.advance-subtitle {
   width: 100%;
   font-size: 28px;
   font-weight: 400;
@@ -548,6 +549,8 @@ img {
 
 .gallery-slide img {
   display: block;
+  width: 90px;
+  height: 90px;
   margin: auto;
   object-fit: cover;
   transition: background 0.3s;
@@ -640,7 +643,7 @@ img {
 .features-item {
   position: relative;
   width: 30%;
-  margin-right: 2%;
+  margin: 0 1%;
   text-align: center;
   font-size: 20px;
   font-weight: 300;
@@ -648,15 +651,11 @@ img {
 
 }
 
-.features-item:last-child {
-  margin-right: 0;
-}
-
 .features-item::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 15%;
+  left: 50%;
   width: 120px;
   height: 120px;
   border: 6px solid #00a1a1;
@@ -664,6 +663,7 @@ img {
   background: transparent url("../img/ballet-pose.svg") no-repeat;
   background-size: 70px 70px;
   background-position: 50% ;
+  transform: translate(-50%);
 }
 
 .features-item:nth-child(2)::before {
@@ -693,35 +693,36 @@ img {
   background: url("../img/pattern.png") repeat;
 }
 
-.age-text {
+.age-wrapper {
   position: relative;
-  display: block;
-  width: 100%;
-  min-height: 330px;
-  padding-left: 50%;
-  padding-top: 80px;
-  font-size: 32px;
-  line-height: 1.4;
-  font-weight: 700;
-  text-align: center;
 }
 
-.age-text::before {
+.age-wrapper::before,
+.age-wrapper::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
+  width: 600px;
+  height: 330px;
   border-radius: 120px 5px;
   border: 5px solid #00a1a1;
   border-width: 5px 5px 25px 25px;
-  background-image: url("../img/gerl+boy.jpg"), url("../img/boy.jpg"), url("../img/gerl.jpg"), url("../img/boy-2.jpg"), url("../img/gerl-2.jpg"), url("../img/gerl+boy-1.jpg");
   background-repeat: no-repeat;
   background-position-y: 50%;
   transform: skew(-7deg);
+}
+
+.age-wrapper::before {
+  top: 13%;
+  left: 0;
+  background-image: url("../img/gerl+boy.jpg"), url("../img/boy.jpg"), url("../img/gerl.jpg"), url("../img/boy-2.jpg"), url("../img/gerl-2.jpg"), url("../img/gerl+boy-1.jpg");
   animation: foto 20s ease;
   animation-iteration-count: infinite;
+}
+
+.age-wrapper::after {
+  top: 60%;
+  right: 0;
+  background-image: url("../img/velo.jpg");
 }
 
 @keyframes foto {
@@ -751,17 +752,26 @@ img {
   }
 }
 
+.age-title {
+  margin-bottom: 30px;
+}
+
+.age-text {
+  display: block;
+  width: 100%;
+  padding-left: 55%;
+  padding-top: 80px;
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-align: center;
+}
+
 .age-text:last-child {
   padding-left: 0;
   padding-right: 50%;
-  margin-bottom: 35px;
-  margin-top: 20px;
-}
-
-.age-text:last-child::before {
-  left: 50%;
-  animation: none;
-  background-image: url("../img/velo.jpg");
+  margin-bottom: 150px;
+  margin-top: 90px;
 }
 
 .age-inner {
@@ -1241,6 +1251,7 @@ img {
 }
 
 .common-menu-footer {
+  display: flex;
   width: 15%;
   padding: 0;
   justify-content: flex-end;
@@ -1394,9 +1405,23 @@ img {
     width: 100%;
   }
 
+  .balancebike-img img {
+    width: 100%;
+    height: 464px;
+    margin: 0 auto;
+  }
+
   .advance {
     width: 100%;
     margin-top: 20px;
+  }
+
+  .advance-subtitle {
+    font-size: 24px;
+  }
+
+  .advance-text {
+    font-size: 18px;
   }
 
   .proggram {
@@ -1404,15 +1429,17 @@ img {
   }
 
   .proggram-inner {
-    background-position: center;
+    background-image: url("../img/programm-1@768.jpg");
+  }
+
+  .proggram-title {
+    margin-bottom: 20px;
   }
 
   .proggram-text {
-    padding-left: 0;
-  }
-
-  .proggram-text:first-child {
-    padding-bottom: 300px;
+    padding-left: 50%;
+    margin-top: 0;
+    font-size: 18px;
   }
 
   .features {
@@ -1420,7 +1447,199 @@ img {
   }
 
   .features-list {
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .features-item {
+    margin-bottom: 20px;
+  }
+
+  .features-title {
+    margin-bottom: 55px;
+  }
+
+  .age-wrapper::before {
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .age-wrapper::after {
+    top: 55%;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  .age-foto img {
+    width: 230px;
+    height: 230px;
+    clip-path: none;
+    object-position: 0 0;
+    border: 4px solid #00a1a1;
+    border-radius: 8px;
+  }
+
+  .age-text {
+    padding-left: 0;
+    padding-top: 345px;
+    font-size: 28px;
+  }
+
+  .age-text br:nth-child(odd) {
+    display: none;
+  }
+
+  .age-text:last-child {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding: 345px 70px 0;
+  }
+
+  .age-inner {
+    padding-bottom: 30px;
+  }
+
+  .age-list {
+    flex-wrap: wrap;
+  }
+
+  .age-item {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+    align-items: flex-start;
+  }
+
+  .age-item-inner {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-left: 35px;
+  }
+
+  .age-item strong {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  .age-item-desc {
+    margin-top: 40px;
+  }
+
+  .seasons {
+    position: relative;
+    height: 300px;
+    padding-top: 55px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .seasons-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .seasons-inner,
+  .seasons-inner .seasons-foto {
+    width: 100%;
+  }
+
+  .seasons-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    font-size: 28px;
+    line-height: 1;
+    background-color: #da7819;
+    z-index: 5;
+  }
+
+  .seasons-foto {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    animation: photos 15s infinite ease-out;
+  }
+
+  @keyframes photos {
+    25% {
+      top: 0;
+    }
+
+    50% {
+      top: -300px;
+    }
+
+    75% {
+      top: -600px;
+    }
+
+    100% {
+      top: -900px;
+    }
+  }
+
+  .training-inner {
+    background-image: url("../img/training@768.jpg");
+    background-position-y: 50%;
+  }
+
+  .training-list {
+    width: 50%;
+    padding: 0;
+    padding-left: 15px;
+  }
+
+  .training-item {
+    font-size: 18px;
+  }
+
+  .training-item:not(:last-child)::after {
+    height: 182%;
+  }
+
+  .protection {
+    padding-top: 50px;
+  }
+
+  .protection-list {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .protection-item {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .payment {
+    padding: 50px 0;
+  }
+
+  .payment-list {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .payment-item {
+    width: 35%;
+    margin-bottom: 40px;
+  }
+
+  .sign-up-wrapper {
+    width: 70%;
+  }
+
+  .common-menu-footer {
+    padding-top: 0;
+  }
+
+  .social-wrapper {
+    justify-content: flex-end;
   }
 
 }
