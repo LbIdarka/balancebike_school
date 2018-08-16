@@ -33,8 +33,6 @@ var scrolledMenu = function () {
     }
     menu.scrollLeft += widthItem;
     btnBack.removeAttribute("disabled");
-    console.log(widthItem);
-    console.log(menu.scrollLeft);
   });
 
   btnBack.addEventListener('click', function () {
@@ -43,8 +41,6 @@ var scrolledMenu = function () {
     }
     btnNext.removeAttribute("disabled");
     menu.scrollLeft -= widthItem;
-    console.log(widthItem);
-    console.log(menu.scrollLeft);
   });
 };
 scrolledMenu();
