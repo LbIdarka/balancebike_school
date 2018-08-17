@@ -250,6 +250,7 @@ img {
   background-color: #707f40;
   background-image: url("../img/caption.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position-y: 60%;
 }
 
@@ -280,6 +281,11 @@ img {
 .slogan-text {
   display: flex;
   width: 100%;
+  font-size: 56px;
+  line-height: 50px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #ffffff;
 }
 
 .slogan-1 {
@@ -288,10 +294,6 @@ img {
   padding: 0 5px 0 15px;
   flex-grow: 1;
   align-self: end;
-  font-size: 56px;
-  line-height: 50px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
   text-align: right;
   color: #fed11a;
   text-transform: uppercase;
@@ -305,11 +307,6 @@ img {
   padding: 0;
   padding-left: 0.2em;
   align-self: end;
-  font-size: 56px;
-  line-height: 50px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: #ffffff;
   text-align: left;
   text-transform: uppercase;
   text-shadow: -1px -1px black,
@@ -323,10 +320,6 @@ img {
   flex-grow: 1;
   align-self: end;
   padding: 0 5px 0 15px;
-  font-size: 56px;
-  line-height: 50px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
   text-align: left;
   text-transform: uppercase;
   color: #2f4f4f;
@@ -1646,6 +1639,10 @@ img {
 /*======= MOBILE SCREEN =======*/
 
 @media (max-width: 699px) and (min-width: 320px) {
+  .page-header {
+    padding-top: 10px;
+  }
+
   .container {
     width: auto;
     margin: 0;
@@ -1660,13 +1657,17 @@ img {
     text-align: center;
   }
 
+  .logo img {
+    height: 65px;
+  }
+
   .common-menu {
-    margin-top: 15px;
+    margin-top: 10px;
     justify-content: center;
   }
 
   .common-menu-item {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .nojs .main-nav-list {
@@ -1686,7 +1687,7 @@ img {
   }
 
   .main-nav {
-    top: 168px;
+    top: 130px;
   }
 
   .main-nav-wrapper {
@@ -1757,7 +1758,44 @@ img {
     top: 0;
   }
 
+  .caption {
+    height: 100%;
+    padding-top: 60px;
+    background-image: url("../img/caption@320.jpg");
+    background-position: center;
+  }
 
+  .caption-name {
+    font-size: 22px;
+    line-height: 1.2;
+  }
 
+  .slogan-text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .btn {
+    width: 280px;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .btn::before {
+    top: 15px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .caption-footer {
+    margin-bottom: 0;
+    margin-top: 110px;
+  }
+
+  .caption-btn,
+  .caption-btn::after {
+    display: none;
+  }
 
 }
