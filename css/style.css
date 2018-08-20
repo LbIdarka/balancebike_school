@@ -2134,4 +2134,28 @@ img {
     background-color: #ee7601;
   }
 
+  .proggram {
+    padding: 25px 0;
+  }
+
+  .proggram-title {
+    margin-bottom: 0;
+  }
+
+  .proggram-inner {
+    background-image: url("../img/programm-1@320.jpg");
+    background-position: center 210px;
+  }
+
+  .proggram-text {
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .proggram-text:last-child {
+    margin-top: 210px;
+  }
+
 }
