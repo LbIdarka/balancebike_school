@@ -816,6 +816,8 @@ img {
   background-position-y: 50%;
   -webkit-transform: skew(-7deg);
           transform: skew(-7deg);
+  -webkit-transition: left 1s ease-out 0.5s;
+  transition: left 1s ease-out 0.5s;
 }
 
 .age-wrapper::before {
@@ -1800,6 +1802,8 @@ img {
     height: 300px;
     -webkit-animation: photos 15s infinite ease-out;
             animation: photos 15s infinite ease-out;
+    -webkit-transition: top 1s ease-out 0.5s;
+    transition: top 1s ease-out 0.5s;
   }
 
   @-webkit-keyframes photos {
@@ -2358,6 +2362,8 @@ img {
     height: 300px;
     -webkit-animation: photos 15s infinite ease-out;
             animation: photos 15s infinite ease-out;
+    -webkit-transition: top 1s ease-out 0.5s;
+    transition: top 1s ease-out 0.5s;
   }
 
   @-webkit-keyframes photos {
@@ -2462,7 +2468,7 @@ img {
   }
 
   .payment-item {
-    width: 100%;
+    width: 80%;
     min-height: 110px;
     margin-bottom: 30px;
     padding: 20px;
@@ -2477,6 +2483,7 @@ img {
 
   .sign-up {
     background-image: url("../img/bg@320.jpg");
+    background-position: 8%;
   }
 
   .sign-up-wrapper {
@@ -2502,5 +2509,33 @@ img {
   .sign-up-place {
     margin: 0;
     font-size: 12px;
+  }
+
+  .page-footer-wrapper {
+    padding: 25px 0 35px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .social {
+    width: 50%;
+    margin-top: 30px;
+  }
+
+  .social-wrapper a {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  .social-link::before {
+    top: 0;
+    left: 10px;
+    background-size: 15px;
+  }
+
+  .common-menu-footer {
+    width: 50%;
+    margin-top: 30px;
   }
 }
