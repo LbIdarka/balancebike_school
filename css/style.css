@@ -2239,4 +2239,268 @@ img {
     padding-right: 0;
   }
 
+  @-webkit-keyframes foto {
+
+    0% {
+      background-position-x: 0, 300px, 600px, 900px, 1200px, 1500px;
+    }
+
+    20% {
+      background-position-x: -300px, 0, 300px, 600px, 900px, 1200px;
+    }
+
+    40% {
+      background-position-x: -600px, -300px, 0, 300px, 600px, 900px;
+    }
+
+    60% {
+      background-position-x: -900px, -600px, -300px, 0, 300px, 600px;
+    }
+
+    80% {
+      background-position-x: -1200px, -900px, -600px, -300px, 0, 300px;
+    }
+
+    100% {
+      background-position-x: -1500px, -1200px, -900px, -600px, -300px, 0;
+    }
+  }
+
+  @keyframes foto {
+
+    0% {
+      background-position-x: 0, 300px, 600px, 900px, 1200px, 1500px;
+    }
+
+    20% {
+      background-position-x: -300px, 0, 300px, 600px, 900px, 1200px;
+    }
+
+    40% {
+      background-position-x: -600px, -300px, 0, 300px, 600px, 900px;
+    }
+
+    60% {
+      background-position-x: -900px, -600px, -300px, 0, 300px, 600px;
+    }
+
+    80% {
+      background-position-x: -1200px, -900px, -600px, -300px, 0, 300px;
+    }
+
+    100% {
+      background-position-x: -1500px, -1200px, -900px, -600px, -300px, 0;
+    }
+  }
+
+  .age-inner {
+    padding: 25px 0;
+  }
+
+  .age-subtitle {
+    margin: 0;
+  }
+
+  .age-list {
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .age-item {
+    width: 100%;
+  }
+
+  .age-item strong {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .age-item-desc {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .seasons {
+    position: relative;
+    height: 300px;
+    padding-top: 55px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .seasons-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .seasons-inner,
+  .seasons-inner .seasons-foto {
+    width: 100%;
+  }
+
+  .seasons-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    font-size: 22px;
+    line-height: 1.1;
+    background-color: #da7819;
+    z-index: 5;
+  }
+
+  .seasons-foto {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    -webkit-animation: photos 15s infinite ease-out;
+            animation: photos 15s infinite ease-out;
+  }
+
+  @-webkit-keyframes photos {
+    25% {
+      top: 0;
+    }
+
+    50% {
+      top: -300px;
+    }
+
+    75% {
+      top: -600px;
+    }
+
+    100% {
+      top: -900px;
+    }
+  }
+
+  @keyframes photos {
+    25% {
+      top: 0;
+    }
+
+    50% {
+      top: -300px;
+    }
+
+    75% {
+      top: -600px;
+    }
+
+    100% {
+      top: -900px;
+    }
+  }
+
+  .training {
+    padding: 25px 0;
+  }
+
+  .training-title {
+    margin: 0;
+  }
+
+  .training-inner {
+    background-position: bottom;
+    background-size: 280px;
+  }
+
+  .training-list {
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 200px;
+  }
+
+  .training-item {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .training-item:not(:last-child)::after {
+    height: 50px;
+  }
+
+  .protection {
+    padding: 25px 0;
+  }
+
+  .protection-title {
+    margin-bottom: 25px;
+  }
+
+  .protection-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  .protection-item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .protection-fn {
+    font-size: 10px;
+  }
+
+  .payment {
+    padding: 25px 0;
+  }
+
+  .payment-title {
+    margin-bottom: 25px;
+  }
+
+  .payment-list {
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .payment-item {
+    width: 100%;
+    min-height: 110px;
+    margin-bottom: 30px;
+    padding: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .payment-item span {
+    font-size: 16px;
+  }
+
+  .sign-up {
+    background-image: url("../img/bg@320.jpg");
+  }
+
+  .sign-up-wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sign-up-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .sign-up-text {
+    font-size: 14px;
+  }
+
+  .sign-up-link {
+    -ms-flex-item-align: center;
+        align-self: center;
+    font-size: 14px;
+  }
+
+  .sign-up-place {
+    margin: 0;
+    font-size: 12px;
+  }
 }
