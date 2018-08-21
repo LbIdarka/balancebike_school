@@ -2168,13 +2168,75 @@ img {
     padding: 25px 0;
   }
 
+  .features-title {
+    margin-bottom: 25px;
+  }
+
   .features-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 
   .features-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
+    min-height: 90px;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 80px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+  }
+
+  .features-item::before {
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-size: 40px;
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  .age {
+    padding-top: 25px;
+  }
+
+  .age-wrapper::before,
+  .age-wrapper::after {
+    width: 280px;
+    height: 200px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+
+  .age-wrapper::before {
+    top: 95px;
+    background-image: url("../img/gerl+boy@320.jpg"),url("../img/boy@320.jpg"),url("../img/gerl@320.jpg"),url("../img/boy-2@320.jpg"),url("../img/gerl-2@320.jpg"),url("../img/gerl+boy-1@320.jpg");
+  }
+
+  .age-wrapper::after {
+    background-image: url("../img/velo@320.jpg");
+  }
+
+  .age-text {
+    padding-left: 0;
+    padding-top: 190px;
+    font-size: 16px;
+  }
+
+  .age-text:last-child {
+    margin-top: 55px;
+    margin-bottom: 25px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
 }
