@@ -481,6 +481,10 @@ img {
   border-radius: 6px;
 }
 
+.balancebike-img-title {
+  display: none;
+}
+
 .advance {
   display: flex;
   width: 60%;
@@ -702,6 +706,7 @@ img {
   background-repeat: no-repeat;
   background-position-y: 50%;
   transform: skew(-7deg);
+  transition: left 1s ease-out 0.5s;
 }
 
 .age-wrapper::before {
@@ -1556,6 +1561,7 @@ img {
     width: 100%;
     height: 300px;
     animation: photos 15s infinite ease-out;
+    transition: top 1s ease-out 0.5s;
   }
 
   @keyframes photos {
@@ -1650,6 +1656,19 @@ img {
 
   .page-header-wrapper {
     flex-wrap: wrap;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .title::before {
+    margin-left: 0;
+  }
+
+  .title::after {
+    margin-right: 0;
   }
 
   .logo {
@@ -1759,7 +1778,7 @@ img {
   }
 
   .caption {
-    height: 100%;
+    height: 500px;
     padding-top: 60px;
     background-image: url("../img/caption@320.jpg");
     background-position: center;
@@ -1771,8 +1790,13 @@ img {
   }
 
   .slogan-text {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.2;
+  }
+
+  .slogan-1,
+  .slogan-3 {
+    padding: 0 5px;
   }
 
   .btn {
@@ -1798,4 +1822,387 @@ img {
     display: none;
   }
 
+  .balancebike {
+    padding: 25px 0;
+  }
+
+  .balancebike-title {
+    margin-bottom: 25px;
+  }
+
+  .balancebike-foto {
+    width: 100%;
+  }
+
+  .balancebike-img img {
+    height: 250px;
+  }
+
+  .advance {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .advance-subtitle {
+    font-size: 20px;
+  }
+
+  .advance-list {
+    width: 100%;
+  }
+
+  .advance-text {
+    font-size: 16px;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .balancebike-img-title {
+    display: block;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #192964;
+    background-color: #ee7601;
+  }
+
+  .proggram {
+    padding: 25px 0;
+  }
+
+  .proggram-title {
+    margin-bottom: 0;
+  }
+
+  .proggram-inner {
+    background: none;
+  }
+
+  .proggram-text {
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .proggram-text:last-child {
+    padding-top: 210px;
+    background-image: url("../img/programm-1@320.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .features {
+    padding: 25px 0;
+  }
+
+  .features-title {
+    margin-bottom: 25px;
+  }
+
+  .features-list {
+    flex-wrap: wrap;
+  }
+
+  .features-item {
+    display: flex;
+    width: 100%;
+    min-height: 90px;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .features-item::before {
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-size: 40px;
+    transform: none;
+  }
+
+  .age {
+    padding-top: 25px;
+  }
+
+  .age-wrapper::before,
+  .age-wrapper::after {
+    width: 280px;
+    height: 200px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .age-wrapper::before {
+    top: 95px;
+    background-image: url("../img/gerl+boy@320.jpg"),url("../img/boy@320.jpg"),url("../img/gerl@320.jpg"),url("../img/boy-2@320.jpg"),url("../img/gerl-2@320.jpg"),url("../img/gerl+boy-1@320.jpg");
+  }
+
+  .age-wrapper::after {
+    background-image: url("../img/velo@320.jpg");
+  }
+
+  .age-text {
+    padding-left: 0;
+    padding-top: 190px;
+    font-size: 16px;
+  }
+
+  .age-text:last-child {
+    margin-top: 55px;
+    margin-bottom: 25px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @keyframes foto {
+
+    0% {
+      background-position-x: 0, 300px, 600px, 900px, 1200px, 1500px;
+    }
+
+    20% {
+      background-position-x: -300px, 0, 300px, 600px, 900px, 1200px;
+    }
+
+    40% {
+      background-position-x: -600px, -300px, 0, 300px, 600px, 900px;
+    }
+
+    60% {
+      background-position-x: -900px, -600px, -300px, 0, 300px, 600px;
+    }
+
+    80% {
+      background-position-x: -1200px, -900px, -600px, -300px, 0, 300px;
+    }
+
+    100% {
+      background-position-x: -1500px, -1200px, -900px, -600px, -300px, 0;
+    }
+  }
+
+  .age-inner {
+    padding: 25px 0;
+  }
+
+  .age-subtitle {
+    margin: 0;
+  }
+
+  .age-list {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .age-item {
+    width: 100%;
+  }
+
+  .age-item strong {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .age-item-desc {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .seasons {
+    position: relative;
+    height: 300px;
+    padding-top: 55px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .seasons-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .seasons-inner,
+  .seasons-inner .seasons-foto {
+    width: 100%;
+  }
+
+  .seasons-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    font-size: 22px;
+    line-height: 1.1;
+    background-color: #da7819;
+    z-index: 5;
+  }
+
+  .seasons-foto {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    animation: photos 15s infinite ease-out;
+    transition: top 1s ease-out 0.5s;
+  }
+
+  @keyframes photos {
+    25% {
+      top: 0;
+    }
+
+    50% {
+      top: -300px;
+    }
+
+    75% {
+      top: -600px;
+    }
+
+    100% {
+      top: -900px;
+    }
+  }
+
+  .training {
+    padding: 25px 0;
+  }
+
+  .training-title {
+    margin: 0;
+  }
+
+  .training-inner {
+    background-position: bottom;
+    background-size: 280px;
+  }
+
+  .training-list {
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 200px;
+  }
+
+  .training-item {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .training-item:not(:last-child)::after {
+    height: 40px;
+  }
+
+  .protection {
+    padding: 25px 0;
+  }
+
+  .protection-title {
+    margin-bottom: 25px;
+  }
+
+  .protection-list {
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  .protection-item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .protection-fn {
+    font-size: 10px;
+  }
+
+  .payment {
+    padding: 25px 0;
+  }
+
+  .payment-title {
+    margin-bottom: 25px;
+  }
+
+  .payment-list {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .payment-item {
+    width: 240px;
+    min-height: 110px;
+    margin-bottom: 30px;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .payment-item span {
+    font-size: 16px;
+  }
+
+  .map-container {
+    background-image: url("../img/map@320.jpg");
+  }
+
+  .sign-up {
+    background-image: url("../img/bg@320.jpg");
+    background-position: 8%;
+  }
+
+  .sign-up-wrapper {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .sign-up-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .sign-up-text {
+    font-size: 14px;
+  }
+
+  .sign-up-link {
+    align-self: center;
+    font-size: 14px;
+  }
+
+  .sign-up-place {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .page-footer-wrapper {
+    padding: 25px 0 35px;
+    flex-wrap: wrap;
+  }
+
+  .social {
+    width: 50%;
+    margin-top: 30px;
+  }
+
+  .social-wrapper a {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  .social-link::before {
+    top: 0;
+    left: 10px;
+    background-size: 15px;
+  }
+
+  .common-menu-footer {
+    width: 50%;
+    margin-top: 30px;
+  }
 }
