@@ -570,6 +570,10 @@ img {
   border-radius: 6px;
 }
 
+.balancebike-img-title {
+  display: none;
+}
+
 .advance {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2143,8 +2147,7 @@ img {
   }
 
   .proggram-inner {
-    background-image: url("../img/programm-1@320.jpg");
-    background-position: center 210px;
+    background: none;
   }
 
   .proggram-text {
@@ -2155,7 +2158,23 @@ img {
   }
 
   .proggram-text:last-child {
-    margin-top: 210px;
+    padding-top: 210px;
+    background-image: url("../img/programm-1@320.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .features {
+    padding: 25px 0;
+  }
+
+  .features-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .features-item {
+    width: 100%;
   }
 
 }
