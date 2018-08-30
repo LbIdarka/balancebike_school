@@ -896,8 +896,8 @@ img {
 
 .age-text {
   display: block;
-  width: 100%;
-  padding-left: 55%;
+  width: 345px;
+  margin-left: auto;
   padding-top: 80px;
   font-size: 32px;
   line-height: 1.4;
@@ -906,10 +906,12 @@ img {
 }
 
 .age-text:last-child {
+  width: 410px;
   padding-left: 0;
-  padding-right: 50%;
+  margin-left: 0;
+  margin-right: auto;
   margin-bottom: 150px;
-  margin-top: 90px;
+  margin-top: 120px;
 }
 
 .age-inner {
@@ -955,24 +957,24 @@ img {
 }
 
 .age-foto img {
-  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 50px;
-     object-position: 0 50px;
+  width: 230px;
+  height: 230px;
+  -webkit-clip-path: none;
+          clip-path: none;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+  border: 5px solid #00a1a1;
+  border-radius: 8px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   -webkit-transition: 0.7s;
   transition: 0.7s;
   cursor: pointer;
 }
 
 .age-foto img:hover {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -o-object-position: 0;
-     object-position: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   border: 5px solid #ee7601;
 }
 
@@ -1696,31 +1698,20 @@ img {
             transform: translate(50%);
   }
 
-  .age-foto img {
-    width: 230px;
-    height: 230px;
-    -webkit-clip-path: none;
-            clip-path: none;
-    -o-object-position: 0 0;
-       object-position: 0 0;
-    border: 4px solid #00a1a1;
-    border-radius: 8px;
-  }
-
   .age-text {
+    width: 500px;
+    margin-right: auto;
     padding-left: 0;
-    padding-top: 345px;
+    padding-top: 365px;
     font-size: 28px;
   }
 
-  .age-text br:nth-child(odd) {
-    display: none;
-  }
-
   .age-text:last-child {
-    margin-top: 45px;
+    width: 500px;
+    margin-left: auto;
+    margin-top: 25px;
     margin-bottom: 30px;
-    padding: 345px 70px 0;
+    padding: 375px 70px 0;
   }
 
   .age-inner {
@@ -2051,14 +2042,14 @@ img {
   }
 
   .caption {
-    height: 500px;
+    height: 100%;
     padding-top: 60px;
     background-image: url("../img/caption@320.jpg");
     background-position: center;
   }
 
   .caption-name {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.2;
   }
 
@@ -2108,7 +2099,7 @@ img {
   }
 
   .balancebike-img img {
-    height: 250px;
+    height: auto;
   }
 
   .advance {
@@ -2231,16 +2222,21 @@ img {
   }
 
   .age-text {
+    width: 300px;
+    margin-right: auto;
     padding-left: 0;
     padding-top: 190px;
     font-size: 16px;
   }
 
   .age-text:last-child {
-    margin-top: 55px;
+    width: 300px;
+    margin-top: 0;
+    margin-left: auto;
     margin-bottom: 25px;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 270px;
   }
 
   @-webkit-keyframes foto {
