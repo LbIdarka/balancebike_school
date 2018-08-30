@@ -2423,7 +2423,7 @@ img {
   }
 
   .training-item:not(:last-child)::after {
-    height: 40px;
+    height: 140%;
   }
 
   .protection {
