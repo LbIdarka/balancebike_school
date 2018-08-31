@@ -31,5 +31,5 @@
       menu.scrollLeft -= widthItem;
     });
   };
-  scrolledMenu();
+  // scrolledMenu();
 })();
