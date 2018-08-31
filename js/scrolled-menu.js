@@ -12,7 +12,7 @@
   var scrolledMenu = function () {
     var i = MIN_INDEX;
     var scaleLineCoords = menuItem[i].getBoundingClientRect();
-    var widthItem =  Math.round(menu.clientWidth - scaleLineCoords.width);
+    var widthItem = scaleLineCoords.width;
 
     btnNext.addEventListener('click', function () {
       if (menu.scrollWidth - menu.scrollLeft - menu.offsetWidth === 0) {
