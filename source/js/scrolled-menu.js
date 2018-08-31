@@ -2,7 +2,7 @@
 
 //======= листание меню на планшетной и мобильной версии =======//
 (function () {
-  var MIN_INDEX = 0;
+  var MIN_INDEX = 2;
   var PLUS_INDEX = 1;
   var menu = document.querySelector(".main-nav-list");
   var menuItem = document.querySelectorAll(".main-nav-item");
@@ -12,7 +12,7 @@
   var scrolledMenu = function () {
     var i = MIN_INDEX;
     var scaleLineCoords = menuItem[i].getBoundingClientRect();
-    var widthItem =  Math.round(menu.clientWidth - scaleLineCoords.width);
+    var widthItem = scaleLineCoords.width;
 
     btnNext.addEventListener('click', function () {
       if (menu.scrollWidth - menu.scrollLeft - menu.offsetWidth === 0) {

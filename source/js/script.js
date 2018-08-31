@@ -45,6 +45,9 @@
             searchControlProvider: 'yandex#search'
         });
 
+        // отключаем зум колёсиком мышки
+        myMap.behaviors.disable('scrollZoom');
+
         myMap.geoObjects
         .add(new ymaps.Placemark([47.249879699421136,39.78802749999991]))
         .add(new ymaps.Placemark([47.18675302959791,39.62492681626882]))
