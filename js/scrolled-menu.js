@@ -28,6 +28,8 @@
         btnBack.setAttribute("disabled", "disabled");
       }
       btnNext.removeAttribute("disabled");
+
+      i -= PLUS_INDEX;
       menu.scrollLeft -= widthItem;
     });
   };

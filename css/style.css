@@ -364,7 +364,7 @@ img {
   text-align: left;
   text-transform: uppercase;
   color: #2f4f4f;
-  text-shadow: -1px -1px black, 0 1px 0 yellow;
+  text-shadow: -1px -1px black, 0 1px 0 #f5d968;
   background: #fed11a;
 }
 
