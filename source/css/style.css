@@ -152,7 +152,7 @@ img {
 }
 
 .common-menu-item {
-  width: 15%;
+  width: auto;
   margin: 10px 0 10px 15px;
   font-size: 20px;
   font-weight: 700;
@@ -160,7 +160,6 @@ img {
 }
 
 .common-menu-item a {
-  font: inherit;
   color: inherit;
   text-decoration: none;
 }
@@ -193,6 +192,10 @@ img {
   background: rgba(243, 243, 243, 0.8);
   box-shadow: 0 2px 12px 2px;
   z-index: 11;
+}
+
+.main-nav-btn {
+  display: none;
 }
 
 .main-nav-list {
@@ -248,6 +251,7 @@ img {
   background-color: #707f40;
   background-image: url("../img/caption.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position-y: 60%;
 }
 
@@ -272,13 +276,17 @@ img {
 .slogan {
   display: flex;
   width: 100%;
-  min-height: 430px;
   align-items: center;
 }
 
 .slogan-text {
   display: flex;
   width: 100%;
+  font-size: 56px;
+  line-height: 50px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #ffffff;
 }
 
 .slogan-1 {
@@ -287,10 +295,6 @@ img {
   padding: 0 5px 0 15px;
   flex-grow: 1;
   align-self: end;
-  font-size: 56px;
-  line-height: 50px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
   text-align: right;
   color: #fed11a;
   text-transform: uppercase;
@@ -304,11 +308,6 @@ img {
   padding: 0;
   padding-left: 0.2em;
   align-self: end;
-  font-size: 56px;
-  line-height: 50px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: #ffffff;
   text-align: left;
   text-transform: uppercase;
   text-shadow: -1px -1px black,
@@ -322,14 +321,10 @@ img {
   flex-grow: 1;
   align-self: end;
   padding: 0 5px 0 15px;
-  font-size: 56px;
-  line-height: 50px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
   text-align: left;
   text-transform: uppercase;
   color: #2f4f4f;
-  text-shadow: -1px -1px black, 0 1px 0 yellow;
+  text-shadow: -1px -1px black, 0 1px 0 #f5d968;
   background: #fed11a;
 }
 
@@ -481,8 +476,14 @@ img {
 
 .balancebike-img img {
   display: block;
+  width: 100%;
+  height: 464px;
   border: 6px solid  #192964;
   border-radius: 6px;
+}
+
+.balancebike-img-title {
+  display: none;
 }
 
 .advance {
@@ -492,7 +493,7 @@ img {
   flex-wrap: wrap;
 }
 
-.adance-subtitle {
+.advance-subtitle {
   width: 100%;
   font-size: 28px;
   font-weight: 400;
@@ -546,6 +547,8 @@ img {
 
 .gallery-slide img {
   display: block;
+  width: 90px;
+  height: 90px;
   margin: auto;
   object-fit: cover;
   transition: background 0.3s;
@@ -638,7 +641,7 @@ img {
 .features-item {
   position: relative;
   width: 30%;
-  margin-right: 2%;
+  margin: 0 1%;
   text-align: center;
   font-size: 20px;
   font-weight: 300;
@@ -646,15 +649,11 @@ img {
 
 }
 
-.features-item:last-child {
-  margin-right: 0;
-}
-
 .features-item::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 15%;
+  left: 50%;
   width: 120px;
   height: 120px;
   border: 6px solid #00a1a1;
@@ -662,6 +661,7 @@ img {
   background: transparent url("../img/ballet-pose.svg") no-repeat;
   background-size: 70px 70px;
   background-position: 50% ;
+  transform: translate(-50%);
 }
 
 .features-item:nth-child(2)::before {
@@ -691,35 +691,37 @@ img {
   background: url("../img/pattern.png") repeat;
 }
 
-.age-text {
+.age-wrapper {
   position: relative;
-  display: block;
-  width: 100%;
-  min-height: 330px;
-  padding-left: 50%;
-  padding-top: 80px;
-  font-size: 32px;
-  line-height: 1.4;
-  font-weight: 700;
-  text-align: center;
 }
 
-.age-text::before {
+.age-wrapper::before,
+.age-wrapper::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
+  width: 600px;
+  height: 330px;
   border-radius: 120px 5px;
   border: 5px solid #00a1a1;
   border-width: 5px 5px 25px 25px;
-  background-image: url("../img/gerl+boy.jpg"), url("../img/boy.jpg"), url("../img/gerl.jpg"), url("../img/boy-2.jpg"), url("../img/gerl-2.jpg"), url("../img/gerl+boy-1.jpg");
   background-repeat: no-repeat;
   background-position-y: 50%;
   transform: skew(-7deg);
+  transition: left 1s ease-out 0.5s;
+}
+
+.age-wrapper::before {
+  top: 13%;
+  left: 0;
+  background-image: url("../img/gerl+boy.jpg"), url("../img/boy.jpg"), url("../img/gerl.jpg"), url("../img/boy-2.jpg"), url("../img/gerl-2.jpg"), url("../img/gerl+boy-1.jpg");
   animation: foto 20s ease;
   animation-iteration-count: infinite;
+}
+
+.age-wrapper::after {
+  top: 60%;
+  right: 0;
+  background-image: url("../img/velo.jpg");
 }
 
 @keyframes foto {
@@ -749,17 +751,28 @@ img {
   }
 }
 
-.age-text:last-child {
-  padding-left: 0;
-  padding-right: 50%;
-  margin-bottom: 35px;
-  margin-top: 20px;
+.age-title {
+  margin-bottom: 30px;
 }
 
-.age-text:last-child::before {
-  left: 50%;
-  animation: none;
-  background-image: url("../img/velo.jpg");
+.age-text {
+  display: block;
+  width: 345px;
+  margin-left: auto;
+  padding-top: 80px;
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-align: center;
+}
+
+.age-text:last-child {
+  width: 410px;
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: 150px;
+  margin-top: 120px;
 }
 
 .age-inner {
@@ -803,17 +816,19 @@ img {
 }
 
 .age-foto img {
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  object-fit: cover;
-  object-position: 0 50px;
+  width: 230px;
+  height: 230px;
+  clip-path: none;
+  object-position: 0 0;
+  border: 5px solid #00a1a1;
+  border-radius: 8px;
+  transform: scale(0.8);
   transition: 0.7s;
   cursor: pointer;
 }
 
 .age-foto img:hover {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  transform: scale(1.2);
-  object-position: 0;
+  transform: scale(1.1);
   border: 5px solid #ee7601;
 }
 
@@ -1239,6 +1254,7 @@ img {
 }
 
 .common-menu-footer {
+  display: flex;
   width: 15%;
   padding: 0;
   justify-content: flex-end;
@@ -1252,23 +1268,108 @@ img {
     width: 94%;
   }
 
+  .logo img {
+    height: 75px;
+  }
+
+  .common-menu {
+    padding-top: 25px;
+  }
+
   .common-menu-item {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .nojs .main-nav-list {
+    flex-wrap: wrap;
+  }
+
+  .nojs .main-nav-item {
+    width: 25%;
+  }
+
+  .nojs .main-nav-item:last-child {
+    border-right: 1px solid #40e0d0;
+  }
+
+  .nojs .main-nav-btn {
+    display: none;
+  }
+
+  .main-nav {
+    top: 100px;
+  }
+
+  .main-nav-wrapper {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .main-nav-btn {
+    position: relative;
+    display: block;
+    width: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-nav-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid transparent;
+    transform: rotate(45deg);
+    border-right-color: #00a1a1;
+    border-top-color: #00a1a1;
+  }
+
+  .main-nav-btn-back {
+    margin-right: 5px;
+  }
+
+  .main-nav-btn-back::before {
+    transform: rotate(-135deg);
+  }
+
+  .main-nav-btn-next {
+    margin-left: 5px;
+  }
+
+  .main-nav-btn:hover::before {
+    border-right-color: #da7819;
+    border-top-color: #da7819;
+  }
+
+  .main-nav-btn:disabled::before {
+    opacity: 0.2;
+  }
+
+  .main-nav-list {
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
 
   .main-nav-item {
-    width: 20%;
+    width: auto;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .main-nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .nav-fixed {
+    top: 0;
   }
 
   .caption {
-    height: calc(100vh - 75px);
-    padding-top: 100px;
-  }
-
-  .caption-name {
-    padding-top: 30px;
+    background-position: 50%;
   }
 
   .slogan span {
@@ -1299,16 +1400,19 @@ img {
     font-size: 30px;
   }
 
-  .title::before {
-    width: 15%;
-  }
-
   .balancebike {
     padding: 40px 0;
   }
 
   .balancebike-foto {
+    width: 666px;
+    margin: 0 auto;
+  }
+
+  .balancebike-img img {
     width: 100%;
+    height: 464px;
+    margin: 0 auto;
   }
 
   .advance {
@@ -1316,20 +1420,30 @@ img {
     margin-top: 20px;
   }
 
+  .advance-subtitle {
+    font-size: 24px;
+  }
+
+  .advance-text {
+    font-size: 18px;
+  }
+
   .proggram {
     padding: 40px 0;
   }
 
   .proggram-inner {
-    background-position: center;
+    background-image: url("../img/programm-1@768.jpg");
+  }
+
+  .proggram-title {
+    margin-bottom: 20px;
   }
 
   .proggram-text {
-    padding-left: 0;
-  }
-
-  .proggram-text:first-child {
-    padding-bottom: 300px;
+    padding-left: 50%;
+    margin-top: 0;
+    font-size: 18px;
   }
 
   .features {
@@ -1337,7 +1451,762 @@ img {
   }
 
   .features-list {
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
+  .features-item {
+    margin-bottom: 20px;
+  }
+
+  .features-title {
+    margin-bottom: 55px;
+  }
+
+  .age-wrapper::before {
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .age-wrapper::after {
+    top: 55%;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  .age-text {
+    width: 500px;
+    margin-right: auto;
+    padding-left: 0;
+    padding-top: 365px;
+    font-size: 28px;
+  }
+
+  .age-text:last-child {
+    width: 500px;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding: 375px 70px 0;
+  }
+
+  .age-inner {
+    padding-bottom: 30px;
+  }
+
+  .age-list {
+    flex-wrap: wrap;
+  }
+
+  .age-item {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+    align-items: flex-start;
+  }
+
+  .age-item-inner {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-left: 35px;
+  }
+
+  .age-item strong {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  .age-item-desc {
+    margin-top: 40px;
+  }
+
+  .seasons {
+    position: relative;
+    height: 300px;
+    padding-top: 55px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .seasons-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .seasons-inner,
+  .seasons-inner .seasons-foto {
+    width: 100%;
+  }
+
+  .seasons-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    font-size: 28px;
+    line-height: 1;
+    background-color: #da7819;
+    z-index: 5;
+  }
+
+  .seasons-foto {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    animation: photos 15s infinite ease-out;
+    transition: top 1s ease-out 0.5s;
+  }
+
+  @keyframes photos {
+    25% {
+      top: 0;
+    }
+
+    50% {
+      top: -300px;
+    }
+
+    75% {
+      top: -600px;
+    }
+
+    100% {
+      top: -900px;
+    }
+  }
+
+  .training-inner {
+    background-image: url("../img/training@768.jpg");
+    background-position-y: 50%;
+  }
+
+  .training-list {
+    width: 50%;
+    padding: 0;
+    padding-left: 15px;
+  }
+
+  .training-item {
+    font-size: 18px;
+  }
+
+  .training-item:not(:last-child)::after {
+    height: 182%;
+  }
+
+  .protection {
+    padding-top: 50px;
+  }
+
+  .protection-list {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .protection-item {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .payment {
+    padding: 50px 0;
+  }
+
+  .payment-list {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .payment-item {
+    width: 35%;
+    margin-bottom: 40px;
+  }
+
+  .sign-up-wrapper {
+    width: 70%;
+  }
+
+  .common-menu-footer {
+    padding-top: 0;
+  }
+
+  .social-wrapper {
+    justify-content: flex-end;
+  }
+}
+
+/*======= MOBILE SCREEN =======*/
+
+@media (max-width: 699px) and (min-width: 320px) {
+  .page-header {
+    padding-top: 10px;
+  }
+
+  .container {
+    width: auto;
+    margin: 0;
+  }
+
+  .page-header-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .title::before {
+    margin-left: 0;
+  }
+
+  .title::after {
+    margin-right: 0;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+
+  .common-menu {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .common-menu-item {
+    font-size: 16px;
+  }
+
+  .nojs .main-nav-list {
+    flex-wrap: wrap;
+  }
+
+  .nojs .main-nav-item {
+    width: 25%;
+  }
+
+  .nojs .main-nav-item:last-child {
+    border-right: 1px solid #40e0d0;
+  }
+
+  .nojs .main-nav-btn {
+    display: none;
+  }
+
+  .main-nav {
+    top: 130px;
+  }
+
+  .main-nav-wrapper {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .main-nav-btn {
+    position: relative;
+    display: block;
+    width: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-nav-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid transparent;
+    transform: rotate(45deg);
+    border-right-color: #00a1a1;
+    border-top-color: #00a1a1;
+  }
+
+  .main-nav-btn-back {
+    margin-right: 5px;
+  }
+
+  .main-nav-btn-back::before {
+    transform: rotate(-135deg);
+  }
+
+  .main-nav-btn-next {
+    margin-left: 5px;
+  }
+
+  .main-nav-btn:hover::before {
+    border-right-color: #da7819;
+    border-top-color: #da7819;
+  }
+
+  .main-nav-btn:disabled::before {
+    opacity: 0.2;
+  }
+
+  .main-nav-list {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .main-nav-item {
+    width: auto;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .main-nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .nav-fixed {
+    top: 0;
+  }
+
+  .caption {
+    height: 100%;
+    padding-top: 60px;
+    background-image: url("../img/caption@320.jpg");
+    background-position: center;
+  }
+
+  .caption-name {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .slogan-text {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .slogan-1,
+  .slogan-3 {
+    padding: 0 5px;
+  }
+
+  .btn {
+    width: 280px;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .btn::before {
+    top: 15px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .caption-footer {
+    margin-bottom: 0;
+    margin-top: 110px;
+  }
+
+  .caption-btn,
+  .caption-btn::after {
+    display: none;
+  }
+
+  .balancebike {
+    padding: 25px 0;
+  }
+
+  .balancebike-title {
+    margin-bottom: 25px;
+  }
+
+  .balancebike-foto {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .balancebike-img img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .advance {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .advance-subtitle {
+    font-size: 20px;
+  }
+
+  .advance-list {
+    width: 100%;
+  }
+
+  .advance-text {
+    font-size: 16px;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .balancebike-img-title {
+    display: block;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #192964;
+    background-color: #ee7601;
+  }
+
+  .proggram {
+    padding: 25px 0;
+  }
+
+  .proggram-title {
+    margin-bottom: 0;
+  }
+
+  .proggram-inner {
+    background: none;
+  }
+
+  .proggram-text {
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .proggram-text:last-child {
+    padding-top: 210px;
+    background-image: url("../img/programm-1@320.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .features {
+    padding: 25px 0;
+  }
+
+  .features-title {
+    margin-bottom: 25px;
+  }
+
+  .features-list {
+    flex-wrap: wrap;
+  }
+
+  .features-item {
+    display: flex;
+    width: 100%;
+    min-height: 90px;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .features-item::before {
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-size: 40px;
+    transform: none;
+  }
+
+  .age {
+    padding-top: 25px;
+  }
+
+  .age-wrapper::before,
+  .age-wrapper::after {
+    width: 280px;
+    height: 200px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .age-wrapper::before {
+    top: 95px;
+    background-image: url("../img/gerl+boy@320.jpg"),url("../img/boy@320.jpg"),url("../img/gerl@320.jpg"),url("../img/boy-2@320.jpg"),url("../img/gerl-2@320.jpg"),url("../img/gerl+boy-1@320.jpg");
+  }
+
+  .age-wrapper::after {
+    background-image: url("../img/velo@320.jpg");
+  }
+
+  .age-text {
+    width: 300px;
+    margin-right: auto;
+    padding-left: 0;
+    padding-top: 190px;
+    font-size: 16px;
+  }
+
+  .age-text:last-child {
+    width: 300px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 25px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 270px;
+  }
+
+  @keyframes foto {
+
+    0% {
+      background-position-x: 0, 300px, 600px, 900px, 1200px, 1500px;
+    }
+
+    20% {
+      background-position-x: -300px, 0, 300px, 600px, 900px, 1200px;
+    }
+
+    40% {
+      background-position-x: -600px, -300px, 0, 300px, 600px, 900px;
+    }
+
+    60% {
+      background-position-x: -900px, -600px, -300px, 0, 300px, 600px;
+    }
+
+    80% {
+      background-position-x: -1200px, -900px, -600px, -300px, 0, 300px;
+    }
+
+    100% {
+      background-position-x: -1500px, -1200px, -900px, -600px, -300px, 0;
+    }
+  }
+
+  .age-inner {
+    padding: 25px 0;
+  }
+
+  .age-subtitle {
+    margin: 0;
+  }
+
+  .age-list {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .age-item {
+    width: 100%;
+  }
+
+  .age-item strong {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .age-item-desc {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .seasons {
+    position: relative;
+    height: 300px;
+    padding-top: 55px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .seasons-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .seasons-inner,
+  .seasons-inner .seasons-foto {
+    width: 100%;
+  }
+
+  .seasons-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    font-size: 22px;
+    line-height: 1.1;
+    background-color: #da7819;
+    z-index: 5;
+  }
+
+  .seasons-foto {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    animation: photos 15s infinite ease-out;
+    transition: top 1s ease-out 0.5s;
+  }
+
+  @keyframes photos {
+    25% {
+      top: 0;
+    }
+
+    50% {
+      top: -300px;
+    }
+
+    75% {
+      top: -600px;
+    }
+
+    100% {
+      top: -900px;
+    }
+  }
+
+  .training {
+    padding: 25px 0;
+  }
+
+  .training-title {
+    margin: 0;
+  }
+
+  .training-inner {
+    background-position: bottom;
+    background-size: 280px;
+  }
+
+  .training-list {
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 200px;
+  }
+
+  .training-item {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .training-item:not(:last-child)::after {
+    height: 140%;
+  }
+
+  .protection {
+    padding: 25px 0;
+  }
+
+  .protection-title {
+    margin-bottom: 25px;
+  }
+
+  .protection-list {
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  .protection-item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .protection-fn {
+    font-size: 10px;
+  }
+
+  .payment {
+    padding: 25px 0;
+  }
+
+  .payment-title {
+    margin-bottom: 25px;
+  }
+
+  .payment-list {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .payment-item {
+    width: 240px;
+    min-height: 110px;
+    margin-bottom: 30px;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .payment-item span {
+    font-size: 16px;
+  }
+
+  .map-container {
+    background-image: url("../img/map@320.jpg");
+  }
+
+  .sign-up {
+    background-image: url("../img/bg@320.jpg");
+    background-position: 8%;
+  }
+
+  .sign-up-wrapper {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .sign-up-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .sign-up-text {
+    font-size: 14px;
+  }
+
+  .sign-up-link {
+    align-self: center;
+    font-size: 14px;
+  }
+
+  .sign-up-place {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .page-footer-wrapper {
+    padding: 25px 0 35px;
+    flex-wrap: wrap;
+  }
+
+  .social {
+    width: 50%;
+    margin-top: 30px;
+  }
+
+  .social-wrapper a {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  .social-link::before {
+    top: 0;
+    left: 10px;
+    background-size: 15px;
+  }
+
+  .common-menu-footer {
+    width: 50%;
+    margin-top: 30px;
+  }
 }

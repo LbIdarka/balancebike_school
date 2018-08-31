@@ -63,7 +63,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task("js", function () {
-  gulp.src("source/js/script.js")
+  gulp.src("source/js/*.js")
     .pipe(jsmin())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"))
