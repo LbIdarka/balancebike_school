@@ -17,33 +17,37 @@ window.onscroll = function() {// событие скрола
   }
 }
 
-//======= листание меню на планшетной и мобильной версии =======//
+// //======= листание меню на планшетной и мобильной версии =======//
+// var MIN_INDEX = 0;
+// var PLUS_INDEX = 1;
+// var menu = document.querySelector(".main-nav-list");
+// var menuItem = document.querySelectorAll(".main-nav-item");
+// var btnNext = document.querySelector(".main-nav-btn-next");
+// var btnBack = document.querySelector(".main-nav-btn-back");
 
-var menu = document.querySelector(".main-nav-list");
-var menuItem = document.querySelectorAll(".main-nav-item");
-var btnNext = document.querySelector(".main-nav-btn-next");
-var btnBack = document.querySelector(".main-nav-btn-back");
-var widthItem = Math.round(menu.scrollWidth - menu.clientWidth);
+// var scrolledMenu = function () {
+//   var i = MIN_INDEX;
+//   var scaleLineCoords = menuItem[i].getBoundingClientRect();
+//   var widthItem =  Math.round(menu.clientWidth - scaleLineCoords.width);
 
-var scrolledMenu = function () {
+//   btnNext.addEventListener('click', function () {
+//     if (menu.scrollWidth - menu.scrollLeft - menu.offsetWidth === 0) {
+//       btnNext.setAttribute("disabled", "disabled");
+//     }
+//     i += PLUS_INDEX;
+//     menu.scrollLeft += widthItem;
+//     btnBack.removeAttribute("disabled");
+//   });
 
-  btnNext.addEventListener('click', function () {
-    if (menu.scrollWidth - menu.scrollLeft - menu.offsetWidth === 0) {
-      btnNext.setAttribute("disabled", "disabled");
-    }
-    menu.scrollLeft += widthItem;
-    btnBack.removeAttribute("disabled");
-  });
-
-  btnBack.addEventListener('click', function () {
-    if (menu.scrollLeft === 0) {
-      btnBack.setAttribute("disabled", "disabled");
-    }
-    btnNext.removeAttribute("disabled");
-    menu.scrollLeft -= widthItem;
-  });
-};
-scrolledMenu();
+//   btnBack.addEventListener('click', function () {
+//     if (menu.scrollLeft === 0) {
+//       btnBack.setAttribute("disabled", "disabled");
+//     }
+//     btnNext.removeAttribute("disabled");
+//     menu.scrollLeft -= widthItem;
+//   });
+// };
+// scrolledMenu();
 
 //======= слайдер =======//
 

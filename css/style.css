@@ -1624,7 +1624,8 @@ img {
   }
 
   .balancebike-foto {
-    width: 100%;
+    width: 666px;
+    margin: 0 auto;
   }
 
   .balancebike-img img {
@@ -2095,11 +2096,14 @@ img {
   }
 
   .balancebike-foto {
-    width: 100%;
+    width: 280px;
+    margin: 0 auto;
   }
 
   .balancebike-img img {
-    height: auto;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .advance {
