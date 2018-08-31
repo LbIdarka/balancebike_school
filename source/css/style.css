@@ -323,7 +323,7 @@ img {
   text-align: left;
   text-transform: uppercase;
   color: #2f4f4f;
-  text-shadow: -1px -1px black, 0 1px 0 yellow;
+  text-shadow: -1px -1px black, 0 1px 0 #f5d968;
   background: #fed11a;
 }
 
@@ -1404,7 +1404,8 @@ img {
   }
 
   .balancebike-foto {
-    width: 100%;
+    width: 666px;
+    margin: 0 auto;
   }
 
   .balancebike-img img {
@@ -1826,11 +1827,13 @@ img {
   }
 
   .balancebike-foto {
-    width: 100%;
+    width: 280px;
+    margin: 0 auto;
   }
 
   .balancebike-img img {
-    height: auto;
+    height: 250px;
+    object-fit: cover;
   }
 
   .advance {
@@ -2096,7 +2099,7 @@ img {
   }
 
   .training-item:not(:last-child)::after {
-    height: 40px;
+    height: 140%;
   }
 
   .protection {
