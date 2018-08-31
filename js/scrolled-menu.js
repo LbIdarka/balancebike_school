@@ -2,7 +2,7 @@
 
 //======= листание меню на планшетной и мобильной версии =======//
 (function () {
-  var MIN_INDEX = 0;
+  var MIN_INDEX = 2;
   var PLUS_INDEX = 1;
   var menu = document.querySelector(".main-nav-list");
   var menuItem = document.querySelectorAll(".main-nav-item");
