@@ -45,6 +45,8 @@
             searchControlProvider: 'yandex#search'
         });
 
+        myMap.behaviors.disable('drag');
+
         myMap.geoObjects
         .add(new ymaps.Placemark([47.249879699421136,39.78802749999991]))
         .add(new ymaps.Placemark([47.18675302959791,39.62492681626882]))
