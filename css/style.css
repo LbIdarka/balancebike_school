@@ -898,8 +898,9 @@ img {
 .age-text {
   display: block;
   width: 345px;
+  min-height: 350px;
   margin-left: auto;
-  padding-top: 80px;
+  padding-top: 10%;
   font-size: 32px;
   line-height: 1.4;
   font-weight: 700;
@@ -911,11 +912,12 @@ img {
   padding-left: 0;
   margin-left: 0;
   margin-right: auto;
-  margin-bottom: 150px;
-  margin-top: 120px;
+  /* margin-bottom: 150px;
+  margin-top: 120px; */
 }
 
 .age-inner {
+  margin-top: 80px;
   padding: 50px 0;
   background: #c1f0c1;
 }
@@ -1495,16 +1497,11 @@ img {
   }
 
   .nojs .main-nav-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    overflow: scroll;
   }
 
   .nojs .main-nav-item {
-    width: 25%;
-  }
-
-  .nojs .main-nav-item:last-child {
-    border-right: 1px solid #40e0d0;
+    width: auto;
   }
 
   .nojs .main-nav-btn {
@@ -1649,6 +1646,12 @@ img {
     font-size: 18px;
   }
 
+  .gallery {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .proggram {
     padding: 40px 0;
   }
@@ -1695,7 +1698,7 @@ img {
   }
 
   .age-wrapper::after {
-    top: 55%;
+    top: 52%;
     right: 50%;
     -webkit-transform: translate(50%);
             transform: translate(50%);
@@ -1714,10 +1717,11 @@ img {
     margin-left: auto;
     margin-top: 25px;
     margin-bottom: 30px;
-    padding: 375px 70px 0;
+    padding: 370px 70px 0;
   }
 
   .age-inner {
+    margin-top: 50px;
     padding-bottom: 30px;
   }
 
@@ -1735,6 +1739,10 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+
+  .age-foto {
+    margin-bottom: 0;
   }
 
   .age-item-inner {
@@ -1951,16 +1959,11 @@ img {
   }
 
   .nojs .main-nav-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    overflow: scroll;
   }
 
   .nojs .main-nav-item {
-    width: 25%;
-  }
-
-  .nojs .main-nav-item:last-child {
-    border-right: 1px solid #40e0d0;
+    width: auto;
   }
 
   .nojs .main-nav-btn {
@@ -2098,6 +2101,27 @@ img {
     display: none;
   }
 
+  .nojs .balancebike-foto {
+    display: none;
+  }
+
+  .nojs .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .nojs .gallery-slide {
+    width: 130px;
+    margin: 1px;
+    border-radius: 0;
+  }
+
   .balancebike {
     padding: 25px 0;
   }
@@ -2233,11 +2257,13 @@ img {
   }
 
   .age-wrapper::after {
+    top: 56%;
     background-image: url("../img/velo@320.jpg");
   }
 
   .age-text {
     width: 300px;
+    min-height: auto;
     margin-right: auto;
     padding-left: 0;
     padding-top: 190px;
@@ -2251,7 +2277,7 @@ img {
     margin-bottom: 25px;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 270px;
+    padding-top: 230px;
   }
 
   @-webkit-keyframes foto {
@@ -2309,6 +2335,7 @@ img {
   }
 
   .age-inner {
+    margin-top: 50px;
     padding: 25px 0;
   }
 
@@ -2324,6 +2351,10 @@ img {
 
   .age-item {
     width: 100%;
+  }
+
+  .age-foto {
+    margin-bottom: 10px;
   }
 
   .age-item strong {
