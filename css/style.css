@@ -1529,6 +1529,7 @@ img {
     background: transparent;
     border: none;
     cursor: pointer;
+    outline: none;
   }
 
   .main-nav-btn::before {
@@ -1984,6 +1985,7 @@ img {
     background: transparent;
     border: none;
     cursor: pointer;
+    outline: none;
   }
 
   .main-nav-btn::before {
@@ -2331,7 +2333,6 @@ img {
 
   .age-item-desc {
     font-size: 16px;
-    text-align: center;
   }
 
   .seasons {
