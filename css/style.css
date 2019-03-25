@@ -1216,10 +1216,6 @@ img {
   border-right: none;
   border-left: none;
   border-top-color: #ee7601;
-  -webkit-animation: border 10s ease-in-out;
-          animation: border 10s ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
   -webkit-box-shadow: 5px 13px 11px -11px;
           box-shadow: 5px 13px 11px -11px;
 }
@@ -1233,32 +1229,6 @@ img {
 .payment-item-price {
   font-weight: 700;
   margin-top: 10px;
-}
-
-@-webkit-keyframes border {
-
-  50% {
-    border-top-color: #2c4296;
-    border-bottom-color: #ee7601;
-  }
-
-  100% {
-    border-top-color: #ee7601;
-    border-bottom-color: #2c4296;
-  }
-}
-
-@keyframes border {
-
-  50% {
-    border-top-color: #2c4296;
-    border-bottom-color: #ee7601;
-  }
-
-  100% {
-    border-top-color: #ee7601;
-    border-bottom-color: #2c4296;
-  }
 }
 
 
