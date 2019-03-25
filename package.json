@@ -47,7 +47,9 @@
     "node": "8.9"
   },
   "dependencies": {
-    "lodash": "^4.17.10",
+    "deep-extend": "^0.6.0",
+    "lodash": "^4.17.11",
+    "merge": "^1.2.1",
     "npm": "^6.4.0"
   }
 }

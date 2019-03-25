@@ -1040,8 +1040,6 @@ img {
   border-right: none;
   border-left: none;
   border-top-color: #ee7601;
-  animation: border 10s ease-in-out;
-  animation-iteration-count: infinite;
   box-shadow: 5px 13px 11px -11px;
 }
 
@@ -1054,19 +1052,6 @@ img {
 .payment-item-price {
   font-weight: 700;
   margin-top: 10px;
-}
-
-@keyframes border {
-
-  50% {
-    border-top-color: #2c4296;
-    border-bottom-color: #ee7601;
-  }
-
-  100% {
-    border-top-color: #ee7601;
-    border-bottom-color: #2c4296;
-  }
 }
 
 
